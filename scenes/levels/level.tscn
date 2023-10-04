@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvnvpyoyt8an4"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ubcq4"]
+[ext_resource type="Texture2D" uid="uid://bwsc0pkedda0s" path="res://graphics/Backgrounds/WhiteBackground.jpeg" id="2_43d43"]
+[ext_resource type="Texture2D" uid="uid://d23h0ijx5t25j" path="res://graphics/Platforms/caster.png" id="3_i1a47"]
+[ext_resource type="PackedScene" uid="uid://c3x66liwbcuf4" path="res://scenes/player/player.tscn" id="3_wxkt5"]
+[ext_resource type="Texture2D" uid="uid://q50qijo76kmm" path="res://graphics/Light/light.png" id="4_rdxdf"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k8cae"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1brx3"]
+texture = ExtResource("3_i1a47")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_k8cae")
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_3bvyf"]
+tile_size = Vector2i(32, 32)
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 11
+sources/0 = SubResource("TileSetAtlasSource_1brx3")
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_ubcq4")
+
+[node name="BackGraphics" type="Node2D" parent="."]
+
+[node name="SpriteBackground" type="Sprite2D" parent="BackGraphics"]
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("2_43d43")
+metadata/_edit_group_ = true
+
+[node name="KillBarrier" type="Area2D" parent="BackGraphics/SpriteBackground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackGraphics/SpriteBackground/KillBarrier"]
+
+[node name="PlatformerTileMap" type="TileMap" parent="BackGraphics"]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(3, 1)
+tile_set = SubResource("TileSet_3bvyf")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 0, 0, 131071, 0, 0, -65534, 0, 0, 65533, 0, 0, 65532, 0, 0)
+
+[node name="LevelChangeArea" type="Area2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelChangeArea"]
+
+[node name="RespawnPoints" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="KillMap" type="TileMap" parent="Node2D"]
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("3_wxkt5")]
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+color = Color(0, 1, 1, 1)
+energy = 6.0
+blend_mode = 1
+shadow_enabled = true
+texture = ExtResource("4_rdxdf")
+texture_scale = 0.75
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
+
+[node name="Lights" type="Node2D" parent="."]
+
+[connection signal="body_entered" from="BackGraphics/SpriteBackground/KillBarrier" to="." method="_on_kill_barrier_body_entered"]
+[connection signal="body_entered" from="LevelChangeArea" to="." method="_on_level_change_area_body_entered"]

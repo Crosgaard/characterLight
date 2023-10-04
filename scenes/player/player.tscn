@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3x66liwbcuf4"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_fs1rk"]
+[ext_resource type="Texture2D" uid="uid://cfsk1ra3y1sbr" path="res://graphics/Bot Wheel/static idle.png" id="2_2xawa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xilg6"]
+radius = 7.0
+height = 18.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 31
+script = ExtResource("1_fs1rk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 3
+scale = Vector2(2.5, 2.5)
+shape = SubResource("CapsuleShape2D_xilg6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-6, -10)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_2xawa")
+hframes = 3
