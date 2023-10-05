@@ -44,7 +44,7 @@ modulate = Color(1, 1, 1, 0)
 scale = Vector2(3, 1)
 tile_set = SubResource("TileSet_3bvyf")
 format = 2
-layer_0/tile_data = PackedInt32Array(65536, 0, 0, 131071, 0, 0, -65534, 0, 0, 65533, 0, 0, 65532, 0, 0)
+layer_0/tile_data = PackedInt32Array(131071, 0, 0, -65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65536, 0, 0, -327684, 0, 0, -327683, 0, 0, -327682, 0, 0, -327681, 0, 0, -393216, 0, 0, -393215, 0, 0, -393214, 0, 0, -393213, 0, 0, -393212, 0, 0)
 
 [node name="LevelChangeArea" type="Area2D" parent="."]
 metadata/_edit_group_ = true
@@ -59,6 +59,7 @@ metadata/_edit_group_ = true
 format = 2
 
 [node name="Player" parent="." instance=ExtResource("3_wxkt5")]
+position = Vector2(0, -254)
 
 [node name="PointLight2D2" type="PointLight2D" parent="Player"]
 color = Color(0, 1, 1, 1)
