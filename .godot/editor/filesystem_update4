@@ -1,3 +1,4 @@
 res://scenes/levels/level.tscn
 res://scenes/player/player.gd
 res://scenes/player/player.tscn
+res://scenes/User Interface/ui.tscn
