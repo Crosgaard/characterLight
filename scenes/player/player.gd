@@ -20,7 +20,7 @@ var waking: bool = false
 var idle: bool = true
 
 func _ready():
-	update_animation_parameters(starting_direction.x)
+	update_animation_parameters()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -39,7 +39,7 @@ func _physics_process(delta):
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		print("direction 1: " + str(direction))
-		update_animation_parameters(direction)
+		update_animation_parameters()
 	else:
 		velocity.x = 0
 	pick_new_state()
@@ -50,7 +50,7 @@ func jump(value: float):
 	velocity.y = JUMP_VELOCITY * value
 
 #direction
-func update_animation_parameters(direction : float):
+func update_animation_parameters():
 	if(direction != 0):
 		prevDir = direction
 		animation_tree.set("parameters/Walk/blend_position", direction)
@@ -58,28 +58,6 @@ func update_animation_parameters(direction : float):
 
 func pick_new_state():
 	if(velocity.x != 0 || velocity.y != 0):
-		if not waking:
-			if (not walking) && idle:
-				if direction < 0: 
-					$AnimationPlayer.play("WakeLeft")
-				else:
-					$AnimationPlayer.play("WakeRight")
-				waking = true
-				await $AnimationPlayer.animation_finished
-				waking = false
-				idle = false
-			else:
-				state_machine.travel("Walk")
-				walking = true
-				idle = false
+		state_machine.travel("Walk")
 	else:
-		if idle:
-			state_machine.travel("Idle")
-		else:
-			walking = false
-			if prevDir < 0: 
-				$AnimationPlayer.play_backwards("WakeLeft")
-			else:
-				$AnimationPlayer.play_backwards("WakeRight")
-			await $AnimationPlayer.animation_finished
-			idle = true
+		state_machine.travel("Idle")

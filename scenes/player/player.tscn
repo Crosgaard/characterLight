@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c3x66liwbcuf4"]
+[gd_scene load_steps=29 format=3 uid="uid://c3x66liwbcuf4"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_fs1rk"]
 [ext_resource type="Texture2D" uid="uid://cfsk1ra3y1sbr" path="res://graphics/Bot Wheel/static idle.png" id="2_2xawa"]
@@ -451,6 +451,8 @@ blend_point_0/node = SubResource("AnimationNodeAnimation_k6rv8")
 blend_point_0/pos = -1.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_37xoh")
 blend_point_1/pos = 1.0
+min_space = -1.1
+max_space = 1.1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lyec0"]
 animation = &"WalkLeft"
@@ -463,27 +465,33 @@ blend_point_0/node = SubResource("AnimationNodeAnimation_lyec0")
 blend_point_0/pos = -1.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_mjxpj")
 blend_point_1/pos = 1.0
+min_space = -1.1
+max_space = 1.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sxtfe"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6ymot"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2swt4"]
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ibpb1"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sxtfe"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6ymot"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8lqtm"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_33s16"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_55oes"]
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0odfa"]
 states/Idle/node = SubResource("AnimationNodeAnimation_k4d2m")
-states/Idle/position = Vector2(311.5, 105.125)
-states/Start/position = Vector2(202.5, 106.062)
+states/Idle/position = Vector2(307.5, 124.484)
+states/Start/position = Vector2(203, 124.414)
 states/Wake/node = SubResource("AnimationNodeBlendSpace1D_fdi5t")
-states/Wake/position = Vector2(426.5, 107)
+states/Wake/position = Vector2(396, 56.0935)
 states/Walk/node = SubResource("AnimationNodeBlendSpace1D_03hhb")
-states/Walk/position = Vector2(564.5, 106.062)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_2swt4"), "Idle", "Wake", SubResource("AnimationNodeStateMachineTransition_ibpb1"), "Wake", "Walk", SubResource("AnimationNodeStateMachineTransition_sxtfe"), "Walk", "Wake", SubResource("AnimationNodeStateMachineTransition_6ymot"), "Wake", "Idle", SubResource("AnimationNodeStateMachineTransition_8lqtm")]
+states/Walk/position = Vector2(495.5, 124.449)
+transitions = ["Wake", "Walk", SubResource("AnimationNodeStateMachineTransition_sxtfe"), "Walk", "Wake", SubResource("AnimationNodeStateMachineTransition_6ymot"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_2swt4"), "Idle", "Wake", SubResource("AnimationNodeStateMachineTransition_ibpb1"), "Wake", "Idle", SubResource("AnimationNodeStateMachineTransition_8lqtm"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_33s16"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_55oes")]
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 31
@@ -498,6 +506,7 @@ shape = SubResource("RectangleShape2D_dmpra")
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="Idle" type="Sprite2D" parent="Sprites"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 position = Vector2(-6, 1)
@@ -517,7 +526,6 @@ hframes = 3
 vframes = 5
 
 [node name="WalkRight" type="Sprite2D" parent="Sprites"]
-visible = false
 light_mask = 2
 visibility_layer = 2
 position = Vector2(-6, 3)
@@ -548,4 +556,4 @@ tree_root = SubResource("AnimationNodeStateMachine_0odfa")
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/Wake/blend_position = -0.995069
-parameters/Walk/blend_position = 0
+parameters/Walk/blend_position = 0.00788951

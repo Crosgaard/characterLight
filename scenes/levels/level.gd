@@ -10,7 +10,7 @@ func _on_kill_barrier_body_entered(body):
 	if(body.name == "Player"):
 		$Player.die()
 
-func _on_level_change_area_body_entered(body):
+func _on_level_change_area_body_entered(_body):
 	Globals.player_movable = false
 	Globals.player_vulnerable = false
 	var tween = create_tween()
