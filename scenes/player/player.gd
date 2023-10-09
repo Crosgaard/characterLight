@@ -8,7 +8,7 @@ extends CharacterBody2D
 const MAX_SPEED = 300.0
 const MOVEMENT_ACCEL = 3000
 const JUMP_VELOCITY = -400.0
-const DASH_SPEED: float = 2000
+const DASH_SPEED: float = 1500
 const DASH_SLOW_TIME: float = 1000
 const DASH_COOLDOWN: float = 250
 
@@ -43,7 +43,6 @@ func _process(delta):
 
 func _physics_process(delta):
 	# Add the gravity.
-	
 	if dash_slow and Input.is_action_just_released("Dash"):
 		dash_slow = false
 		can_dash = false
