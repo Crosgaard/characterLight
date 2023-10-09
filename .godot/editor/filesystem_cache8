@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696525319
+::res://::1696586583
 icon.svg::CompressedTexture2D::7499595460562371097::1696491068::1696491068::1::::<><>::
 ::res://globals/::1696491068
 globals.gd::GDScript::-1::1696491068::0::1::::<>Node<>::
@@ -27,9 +27,9 @@ spot.png::CompressedTexture2D::2260599367311824811::1696491068::1696491068::1:::
 ::res://graphics/Platforms/::1696491068
 caster.png::CompressedTexture2D::9112633505392763657::1696491068::1696491068::1::::<><>::
 ::res://scenes/::1696491068
-::res://scenes/levels/::1696525281
+::res://scenes/levels/::1696540715
 level.gd::GDScript::-1::1696491068::0::1::::LevelParent<>Node2D<>::
-level.tscn::PackedScene::8661367805342232847::1696525281::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png
-::res://scenes/player/::1696525281
-player.gd::GDScript::-1::1696491068::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6787547855097600375::1696525281::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png
+level.tscn::PackedScene::8661367805342232847::1696540715::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png
+::res://scenes/player/::1696540715
+player.gd::GDScript::-1::1696540715::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6787547855097600375::1696540166::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png
