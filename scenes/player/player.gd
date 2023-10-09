@@ -35,8 +35,9 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("Dash") and can_dash and Time.get_ticks_msec() - last_dash > DASH_COOLDOWN:
 		dash_slow = true
-		Engine.time_scale = time_scale_speed
-	if dash_slow and Time.get_ticks_msec() - last_dash_slow > DASH_SLOW_TIME:
+		if not is_on_floor():
+			Engine.time_scale = time_scale_speed
+	if dash_slow and Time.get_ticks_msec() - last_dash_slow > DASH_SLOW_TIME and not is_on_floor():
 		Engine.time_scale *= 1.05
 		if Engine.time_scale > 1:
 			Input.action_release("Dash")
@@ -89,12 +90,21 @@ func _physics_process(delta):
 	pick_new_state()
 	
 	move_and_slide()
-	print("direction 2: " + str(direction))
+	check_enemy_collisions()
 
 func jump(value: float):
 	velocity.y = JUMP_VELOCITY * value
 
-#direction
+func check_enemy_collisions():
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider.name == "KillMap":
+			die()
+
+func die():
+	position = respawn_position
+#animation
 func update_animation_parameters():
 	if(direction != 0):
 		prevDir = direction
