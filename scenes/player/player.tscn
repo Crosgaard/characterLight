@@ -506,7 +506,6 @@ shape = SubResource("RectangleShape2D_dmpra")
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="Idle" type="Sprite2D" parent="Sprites"]
-visible = false
 light_mask = 2
 visibility_layer = 2
 position = Vector2(-6, 1)
@@ -537,6 +536,7 @@ hframes = 3
 vframes = 8
 
 [node name="WalkLeft" type="Sprite2D" parent="Sprites"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 position = Vector2(6, 2)

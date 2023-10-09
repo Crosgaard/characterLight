@@ -1,31 +1,27 @@
 extends CharacterBody2D
-
-
-const MAX_SPEED = 300.0
-const MOVEMENT_ACCEL = 3000
-const JUMP_VELOCITY = -400.0
-const DASH_SPEED : float = 2000
-const DASH_COOLDOWN : float = 1000
-
-var dash_slow : bool = false
-var dashing : bool = false
-var last_dash : float = 0
-
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
-func _process(delta):
-	if Input.is_action_just_pressed("Dash") and Time.get_ticks_msec() - last_dash > DASH_COOLDOWN:
-		dash_slow = true
-		Engine.time_scale = 0.2
-		
 @export var starting_direction: Vector2 = Vector2.RIGHT
-
 @onready var direction: float = starting_direction.x
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 @onready var respawn_position: Vector2 = position
+
+const MAX_SPEED = 300.0
+const MOVEMENT_ACCEL = 3000
+const JUMP_VELOCITY = -400.0
+const DASH_SPEED: float = 2000
+const DASH_SLOW_TIME: float = 1000
+const DASH_COOLDOWN: float = 250
+
+var dash_slow: bool = false
+var dashing: bool = false
+var can_dash: bool = true
+var last_dash: float = 0
+var last_dash_slow: float = 0
+var original_time_scale_speed: float = 0.1
+var time_scale_speed: float = original_time_scale_speed
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var prevDir: float = direction
 
@@ -36,11 +32,21 @@ var idle: bool = true
 func _ready():
 	update_animation_parameters()
 
+func _process(delta):
+	if Input.is_action_just_pressed("Dash") and can_dash and Time.get_ticks_msec() - last_dash > DASH_COOLDOWN:
+		dash_slow = true
+		Engine.time_scale = time_scale_speed
+	if dash_slow and Time.get_ticks_msec() - last_dash_slow > DASH_SLOW_TIME:
+		Engine.time_scale *= 1.06
+		if Engine.time_scale > 1:
+			Input.action_release("Dash")
+
 func _physics_process(delta):
 	# Add the gravity.
-
+	
 	if dash_slow and Input.is_action_just_released("Dash"):
 		dash_slow = false
+		can_dash = false
 		dashing = true
 		last_dash = Time.get_ticks_msec()
 		Engine.time_scale = 1
@@ -51,6 +57,9 @@ func _physics_process(delta):
 		
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	else:
+		can_dash = true
+	
 	# Handle Jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
