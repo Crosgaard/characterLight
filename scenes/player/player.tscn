@@ -522,10 +522,12 @@ position = Vector2(12, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("3_3u7pp")
 offset = Vector2(-3, 2.08165e-12)
+flip_h = true
 hframes = 3
 vframes = 5
 
 [node name="WalkRight" type="Sprite2D" parent="Sprites"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 position = Vector2(-6, 3)
@@ -535,7 +537,6 @@ hframes = 3
 vframes = 8
 
 [node name="WalkLeft" type="Sprite2D" parent="Sprites"]
-visible = false
 light_mask = 2
 visibility_layer = 2
 position = Vector2(6, 2)
