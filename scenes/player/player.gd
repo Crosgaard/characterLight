@@ -8,8 +8,8 @@ extends CharacterBody2D
 const MAX_SPEED = 300.0
 const MOVEMENT_ACCEL = 3000
 const JUMP_VELOCITY = -400.0
-const DASH_SPEED: float = 2000
-const DASH_SLOW_TIME: float = 1000
+const DASH_SPEED: float = 1500
+const DASH_SLOW_TIME: float = 1500
 const DASH_COOLDOWN: float = 250
 
 var dash_slow: bool = false
@@ -37,7 +37,7 @@ func _process(delta):
 		dash_slow = true
 		Engine.time_scale = time_scale_speed
 	if dash_slow and Time.get_ticks_msec() - last_dash_slow > DASH_SLOW_TIME:
-		Engine.time_scale *= 1.06
+		Engine.time_scale *= 1.05
 		if Engine.time_scale > 1:
 			Input.action_release("Dash")
 
