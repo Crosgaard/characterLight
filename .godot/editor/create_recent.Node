@@ -1,7 +1,8 @@
+Sprite2D
+MeshInstance2D
 CanvasModulate
 LightOccluder2D
 DirectionalLight2D
-Sprite2D
 Node2D
 AnimationTree
 AnimationPlayer

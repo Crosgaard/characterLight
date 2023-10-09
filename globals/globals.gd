@@ -4,13 +4,6 @@ signal stat_change
 
 var current_scene: String = "res://Scenes/Levels/level.tscn"
 
-var score: int = 0:
-	set(value):
-		score = value
-		stat_change.emit()
-
-var prev_score = score
-
 var max_health: int = 5
 var player_vulnerable: bool = true
 
@@ -40,3 +33,14 @@ func player_movable_timer():
 	await get_tree().create_timer(0.5).timeout
 	player_movable = true
 	print(player_movable)
+
+const DASH_SLOW_TIME: float = 1000
+var dash_slowing: bool = false
+
+var dash_time_used: float = 0:
+	set(value):
+		dash_time_used = value
+		stat_change.emit()
+
+
+
