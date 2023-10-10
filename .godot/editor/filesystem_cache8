@@ -1,12 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696921517
+::res://::1696935971
 ._icon.svg::::-1::1696850270::1696850270::1::::<><>::
+._Level 1.gd::GDScript::-1::1696924880::0::1::::<>RefCounted<>::
 icon.svg::CompressedTexture2D::7499595460562371097::1696850270::1696850270::1::::<><>::
 Level 1.gd::GDScript::-1::1696920807::0::1::::<>Node2D<>::
-::res://globals/::1696920357
+::res://globals/::1696935966
 ._globals.gd::GDScript::-1::1696850270::0::1::::<>RefCounted<>::
 globals.gd::GDScript::-1::1696920357::0::1::::<>Node<>::
-::res://graphics/::1696922272
+::res://graphics/::1696935971
+Bad Controls.png::CompressedTexture2D::55517920395964092::1696935894::1696935979::1::::<><>::
 cursor.png::CompressedTexture2D::4852813341781047328::1696920357::1696920357::1::::<><>::
 White Arrow.png::CompressedTexture2D::6412443485034986012::1696922272::1696922273::1::::<><>::
 ::res://graphics/Backgrounds/::1696850270
@@ -66,45 +68,30 @@ over - Copy.png::CompressedTexture2D::2090012094940125016::1696920357::169692035
 over.png::CompressedTexture2D::8559023435429303973::1696920357::1696920357::1::::<><>::
 progress - Copy.png::CompressedTexture2D::1909411154695168096::1696920357::1696920357::1::::<><>::
 progress.png::CompressedTexture2D::8163559814615512128::1696920357::1696920357::1::::<><>::
-::res://scenes/::1696920357
-::res://scenes/levels/::1696922075
+::res://scenes/::1696932446
+::res://scenes/levels/::1696933263
 ._level.gd::GDScript::-1::1696920357::0::1::::<>RefCounted<>::
 ._level.gdshader::Shader::-1::1696920357::0::1::::<><>::
 ._level.tscn::PackedScene::-1::1696850270::0::1::::<><>::
+._level_1.tscn::PackedScene::-1::1696924880::0::1::::<><>::
 ._shaderTest.gdshader::Shader::-1::1696920357::0::1::::<><>::
 level.gd::GDScript::-1::1696920822::0::1::::<>Node2D<>::
 level.gdshader::Shader::-1::1696920357::0::1::::<><>::
-level.tscn::PackedScene::8661367805342232847::1696922074::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>res://scenes/levels/level.gdshader<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png<>uid://cjqivewxa86y4::::res://scenes/User Interface/ui.tscn
-level_1.tscn::PackedScene::7626154465958237190::1696922075::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://Level 1.gd
-shaderTest.gdshader::Shader::-1::1696922075::0::1::::<><>::
-::res://scenes/player/::1696922074
+level.tscn::PackedScene::8661367805342232847::1696933036::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png<>uid://cjqivewxa86y4::::res://scenes/User Interface/ui.tscn
+level_1.tscn::PackedScene::7626154465958237190::1696933036::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://Level 1.gd<>uid://bs5upjeh12f1l::::res://scenes/objects/arrow.tscn
+shaderTest.gdshader::Shader::-1::1696933263::0::1::::<><>::
+::res://scenes/Menu/::1696933260
+menu.gd::GDScript::-1::1696933036::0::1::::<>Control<>::
+menu.tscn::PackedScene::5811735312644111826::1696933260::0::1::::<><>::res://scenes/Menu/menu.gd
+::res://scenes/objects/::1696933036
+arrow.tscn::PackedScene::3712992807806609515::1696933036::0::1::::<><>::uid://cxmiaiqb0rfnw::::res://graphics/White Arrow.png
+::res://scenes/player/::1696933036
 ._player.gd::GDScript::-1::1696850270::0::1::::<>RefCounted<>::
 ._player.tscn::PackedScene::-1::1696850270::0::1::::<><>::
-player.gd::GDScript::-1::1696921522::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6787547855097600375::1696922074::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png<>uid://cs4pbarh4al7c::::res://graphics/Bot Wheel/wake.png<>uid://6j47pwlyp22g::::res://graphics/Bot Wheel/move without FX right.png<>uid://damckno5bre7::::res://graphics/Bot Wheel/move without FX left.png
-::res://scenes/User Interface/::1696922074
+player.gd::GDScript::-1::1696925177::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6787547855097600375::1696933036::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png<>uid://cs4pbarh4al7c::::res://graphics/Bot Wheel/wake.png<>uid://6j47pwlyp22g::::res://graphics/Bot Wheel/move without FX right.png<>uid://damckno5bre7::::res://graphics/Bot Wheel/move without FX left.png
+::res://scenes/User Interface/::1696933036
 ._ui.gd::GDScript::-1::1696920357::0::1::::<>RefCounted<>::
 ._ui.tscn::PackedScene::-1::1696920357::0::1::::<><>::
 ui.gd::GDScript::-1::1696920357::0::1::::<>CanvasLayer<>::
-ui.tscn::PackedScene::5438094486933030705::1696922074::0::1::::<><>::res://Scenes/User Interface/ui.gd<>uid://dt7b4ork33m7v::::res://graphics/UI/progress_bar/over.png<>uid://dokqvw41jnbf1::::res://graphics/UI/progress_bar/progress.png<>uid://2g6ytq7aaagu::::res://graphics/UI/progress_bar/progress - Copy.png<>uid://41ogudbq6rym::::res://graphics/UI/progress_bar/over - Copy.png
-::res://Scenes/::1696920357
-::res://Scenes/levels/::1696922075
-._level.gd::GDScript::-1::1696920357::0::1::::<>RefCounted<>::
-._level.gdshader::Shader::-1::1696920357::0::1::::<><>::
-._level.tscn::PackedScene::-1::1696850270::0::1::::<><>::
-._shaderTest.gdshader::Shader::-1::1696920357::0::1::::<><>::
-level.gd::GDScript::-1::1696920822::0::1::::<>Node2D<>::
-level.gdshader::Shader::-1::1696920357::0::1::::<><>::
-level.tscn::PackedScene::8661367805342232847::1696921522::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>res://scenes/levels/level.gdshader<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png<>uid://cjqivewxa86y4::::res://scenes/User Interface/ui.tscn
-level_1.tscn::PackedScene::7626154465958237190::1696921523::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://Level 1.gd
-shaderTest.gdshader::Shader::-1::1696921523::0::1::::<><>::
-::res://Scenes/player/::1696922074
-._player.gd::GDScript::-1::1696850270::0::1::::<>RefCounted<>::
-._player.tscn::PackedScene::-1::1696850270::0::1::::<><>::
-player.gd::GDScript::-1::1696921522::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6787547855097600375::1696921523::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png<>uid://cs4pbarh4al7c::::res://graphics/Bot Wheel/wake.png<>uid://6j47pwlyp22g::::res://graphics/Bot Wheel/move without FX right.png<>uid://damckno5bre7::::res://graphics/Bot Wheel/move without FX left.png
-::res://Scenes/User Interface/::1696922074
-._ui.gd::GDScript::-1::1696920357::0::1::::<>RefCounted<>::
-._ui.tscn::PackedScene::-1::1696920357::0::1::::<><>::
-ui.gd::GDScript::-1::1696920357::0::1::::<>CanvasLayer<>::
-ui.tscn::PackedScene::-1::1696921523::0::1::::<><>::
+ui.tscn::PackedScene::5438094486933030705::1696933036::0::1::::<><>::res://Scenes/User Interface/ui.gd<>uid://dt7b4ork33m7v::::res://graphics/UI/progress_bar/over.png<>uid://dokqvw41jnbf1::::res://graphics/UI/progress_bar/progress.png<>uid://2g6ytq7aaagu::::res://graphics/UI/progress_bar/progress - Copy.png<>uid://41ogudbq6rym::::res://graphics/UI/progress_bar/over - Copy.png

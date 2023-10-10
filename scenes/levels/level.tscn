@@ -1,15 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvnvpyoyt8an4"]
+[gd_scene load_steps=15 format=3 uid="uid://dvnvpyoyt8an4"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ubcq4"]
 [ext_resource type="Texture2D" uid="uid://bwsc0pkedda0s" path="res://graphics/Backgrounds/WhiteBackground.jpeg" id="2_43d43"]
-[ext_resource type="Shader" path="res://scenes/levels/level.gdshader" id="3_hfd6a"]
 [ext_resource type="Texture2D" uid="uid://d23h0ijx5t25j" path="res://graphics/Platforms/caster.png" id="3_i1a47"]
 [ext_resource type="PackedScene" uid="uid://c3x66liwbcuf4" path="res://scenes/player/player.tscn" id="3_wxkt5"]
 [ext_resource type="Texture2D" uid="uid://q50qijo76kmm" path="res://graphics/Light/light.png" id="5_vbqbr"]
 [ext_resource type="PackedScene" uid="uid://cjqivewxa86y4" path="res://scenes/User Interface/ui.tscn" id="6_5qi5d"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rdo04"]
-shader = ExtResource("3_hfd6a")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rcvgb"]
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -72,13 +68,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackGraphics/SpriteBackground/KillBarrier"]
 position = Vector2(-23.769, 675)
 
-[node name="Sprite2D" type="Sprite2D" parent="BackGraphics"]
-modulate = Color(1, 1, 1, 0)
-material = SubResource("ShaderMaterial_rdo04")
-position = Vector2(-0.000183105, -6.10352e-05)
-scale = Vector2(416, 277.25)
-texture = ExtResource("3_i1a47")
-
 [node name="KillMap" type="TileMap" parent="BackGraphics"]
 scale = Vector2(3, 1)
 tile_set = SubResource("TileSet_2r2gw")
@@ -104,6 +93,7 @@ metadata/_edit_group_ = true
 light_mask = 2
 material = SubResource("CanvasItemMaterial_ygyvn")
 position = Vector2(0, -254)
+metadata/_edit_group_ = true
 
 [node name="PointLight2D3" type="PointLight2D" parent="Player"]
 color = Color(1, 0, 0, 1)

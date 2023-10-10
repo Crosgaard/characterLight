@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bol8knou8nj20"]
+
+[ext_resource type="Script" path="res://scenes/Menu/controls_menu.gd" id="1_11gs6"]
+[ext_resource type="Texture2D" uid="uid://15mwctkpqwy" path="res://graphics/Bad Controls.png" id="1_qsshk"]
+
+[node name="Controls menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_11gs6")
+
+[node name="BadControls" type="Sprite2D" parent="."]
+position = Vector2(1049, 579)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_qsshk")
+
+[node name="Camera2D" type="Camera2D" parent="BadControls"]
+position = Vector2(5.96046e-08, 2.38419e-07)
+scale = Vector2(0.4, 0.4)
+zoom = Vector2(0.925, 0.925)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+
+[node name="Button" type="Button" parent="MarginContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]
