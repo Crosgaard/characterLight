@@ -1,29 +1,92 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgwfwdicjhwmo"]
+[gd_scene load_steps=6 format=3 uid="uid://dgwfwdicjhwmo"]
 
 [ext_resource type="PackedScene" uid="uid://dvnvpyoyt8an4" path="res://scenes/levels/level.tscn" id="1_lkat5"]
 [ext_resource type="Script" path="res://Level 1.gd" id="2_7frv5"]
 [ext_resource type="PackedScene" uid="uid://bs5upjeh12f1l" path="res://scenes/objects/arrow.tscn" id="3_8v0kd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fug7g"]
-size = Vector2(2181.85, 20)
+size = Vector2(3549.85, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfyme"]
+size = Vector2(312, 213)
 
 [node name="Level 1" instance=ExtResource("1_lkat5")]
 script = ExtResource("2_7frv5")
 
+[node name="SpriteBackground" parent="BackGraphics" index="0"]
+position = Vector2(314, 67)
+
 [node name="CollisionShape2D" parent="BackGraphics/SpriteBackground/KillBarrier" index="0"]
-position = Vector2(-35.5384, 675)
+position = Vector2(103.846, 675)
 shape = SubResource("RectangleShape2D_fug7g")
 
-[node name="KillMap" parent="BackGraphics" index="2"]
-layer_0/tile_data = PackedInt32Array(-2293766, 0, 0, -2293765, 0, 0, -2293764, 0, 0, -2293763, 0, 0, -2293762, 0, 0, -2293761, 0, 0, -2359296, 0, 0, -2424832, 0, 0, -2359297, 0, 0, -2359298, 0, 0, -2359300, 0, 0, -2359301, 0, 0, -2359299, 0, 0, -2293767, 0, 0, -2359303, 0, 0, -2359302, 0, 0)
+[node name="KillMap" parent="BackGraphics" index="1"]
+layer_0/tile_data = PackedInt32Array(-3211271, 0, 0, -3145735, 0, 0, -3211270, 0, 0, -3145734, 0, 0, -3211269, 0, 0, -3145733, 0, 0, -3211268, 0, 0, -3145732, 0, 0, -3211267, 0, 0, -3145731, 0, 0, -3211266, 0, 0, -3145730, 0, 0, -3211265, 0, 0, -3145729, 0, 0, -3276800, 0, 0, -3211264, 0, 0, -5177340, 0, 0, -5177339, 0, 0, -5177338, 0, 0, -5177337, 0, 0, -5177336, 0, 0, -5177341, 0, 0, -5111800, 0, 0, -5046264, 0, 0, -4980728, 0, 0, -4915192, 0, 0, -4849656, 0, 0, -4521980, 0, 0, -4587516, 0, 0, -4653052, 0, 0, -4718588, 0, 0, -4784124, 0, 0, -4849660, 0, 0, -4915196, 0, 0, -4456444, 0, 0, -3145736, 0, 0, -3211272, 0, 0, -3211273, 0, 0, -3145737, 0, 0, -3080201, 0, 0, -3014665, 0, 0, -3014664, 0, 0, -3080200, 0, 0, -2949128, 0, 0, -2883592, 0, 0, -2883593, 0, 0, -2949129, 0, 0, -4653049, 0, 0, -4718585, 0, 0, -4784121, 0, 0, -4849657, 0, 0, -4915193, 0, 0, -4980729, 0, 0, -5046265, 0, 0, -5111801, 0, 0, -4915197, 0, 0, -5242881, 0, 0, -5242882, 0, 0, -5177345, 0, 0, -5177346, 0, 0, -5111810, 0, 0, -5111809, 0, 0)
 
-[node name="PlatformerTileMap" parent="BackGraphics" index="3"]
-modulate = Color(1, 1, 1, 0.568627)
-layer_0/tile_data = PackedInt32Array(-393217, 0, 0, -458752, 0, 0, -917506, 0, 0, -851971, 0, 0, -851972, 0, 0, -1179654, 0, 0, -1179655, 0, 0, -1245191, 0, 0, -1310727, 0, 0, -1376263, 0, 0, -1441799, 0, 0, -1507335, 0, 0, -1572871, 0, 0, -1638407, 0, 0, -1703943, 0, 0, -1769479, 0, 0, -1835015, 0, 0, -1900551, 0, 0, -1966087, 0, 0, -1966086, 0, 0, -2031616, 0, 0, -786425, 1, 0)
+[node name="PlatformerTileMap" parent="BackGraphics" index="2"]
+layer_0/tile_data = PackedInt32Array(-393217, 0, 0, -458752, 0, 0, 917502, 0, 0, 851966, 0, 0, 851967, 0, 0, 917503, 0, 0, 720892, 0, 0, 720893, 0, 0, 524282, 0, 0, 524283, 0, 0, 262141, 0, 0, 262140, 0, 0, -65538, 0, 0, -2818055, 0, 0, -2752519, 0, 0, -2686983, 0, 0, -2621447, 0, 0, -2555911, 0, 0, -2490375, 0, 0, -2424839, 0, 0, -2359303, 0, 0, -2293767, 0, 0, -2228231, 0, 0, -2162695, 0, 0, -2097159, 0, 0, -2031623, 0, 0, -3866630, 0, 0, -2818054, 0, 0, -2031622, 0, 0, -3276804, 0, 0, -1703940, 0, 0, -3276803, 0, 0, -1703939, 0, 0, -4390914, 0, 0, -1769474, 0, 0, -4390913, 0, 0, -2883584, 0, 0, -2883583, 0, 0, -1638393, 1, 0, -1179647, 0, 0, -4456448, 0, 0, -4456447, 0, 0, -4456446, 0, 0, -4456445, 0, 0, -4456444, 0, 0, -4456443, 0, 0, -4653056, 0, 0, -4718592, 0, 0, -4784128, 0, 0, -4849664, 0, 0, -4915200, 0, 0, -4980736, 0, 0, -5046272, 0, 0, -5111808, 0, 0, -5177344, 0, 0, -5177343, 0, 0, -5242879, 0, 0, -5242878, 0, 0, -5177342, 0, 0, -5177341, 0, 0, -5242876, 0, 0, -5242877, 0, 0, -5308415, 0, 0, -5308416, 0, 0, -5242880, 0, 0, -5308414, 0, 0, -5308413, 0, 0, -5308412, 0, 0, -5308411, 0, 0, -5308410, 0, 0, -5308409, 0, 0, -5308408, 0, 0, -5242873, 0, 0, -5177337, 0, 0, -5242874, 0, 0, -5242875, 0, 0, -5177340, 0, 0, -5177339, 0, 0, -5177338, 0, 0, -5242872, 0, 0, -5177336, 0, 0, -4521981, 0, 0, -4587517, 0, 0, -4653053, 0, 0, -4718589, 0, 0, -4784125, 0, 0, -4849661, 0, 0, -4915197, 0, 0, -4521982, 0, 0, -4587518, 0, 0, -4653054, 0, 0, -4718590, 0, 0, -4784126, 0, 0, -4849662, 0, 0, -4915198, 0, 0, -4980734, 0, 0, -4456442, 0, 0, -4456441, 0, 0, -4456440, 0, 0, -4456439, 0, 0, -4915191, 0, 0)
 
 [node name="Arrow" parent="BackGraphics/Arrows" index="0" instance=ExtResource("3_8v0kd")]
 modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(-18.1538, -430.769)
+rotation = 0.287979
+
+[node name="Arrow3" parent="BackGraphics/Arrows" index="1" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(-0.615387, -266.615)
+rotation = 3.14159
+
+[node name="Arrow2" parent="BackGraphics/Arrows" index="2" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(-36, -226)
+rotation = -6.28319
+
+[node name="Arrow5" parent="BackGraphics/Arrows" index="3" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(39.6924, -448.154)
+rotation = 1.74533
+
+[node name="Arrow6" parent="BackGraphics/Arrows" index="4" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(20, -449.077)
+rotation = 1.5708
+
+[node name="Arrow7" parent="BackGraphics/Arrows" index="5" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(4.15381, -449.846)
+rotation = 1.23918
+
+[node name="Arrow8" parent="BackGraphics/Arrows" index="6" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(-12.1538, -444.923)
+rotation = 1.028
+
+[node name="Arrow9" parent="BackGraphics/Arrows" index="7" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(67.5386, -427.538)
+rotation = 2.79253
+
+[node name="Arrow11" parent="BackGraphics/Arrows" index="8" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(141.385, -396.769)
+rotation = 1.5708
+
+[node name="Arrow10" parent="BackGraphics/Arrows" index="9" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(55.231, -442.462)
+rotation = 2.0944
+
+[node name="LevelChangeArea" parent="." index="1"]
+position = Vector2(11, 2)
+
+[node name="CollisionShape2D" parent="LevelChangeArea" index="0"]
+position = Vector2(146, -2697.5)
+shape = SubResource("RectangleShape2D_qfyme")
+
+[node name="Player" parent="." index="3"]
 position = Vector2(-22.7692, -163.077)
 
 [node name="Camera2D" parent="Player" index="5"]
 zoom = Vector2(1.5, 1.5)
+limit_left = -6656
+limit_right = 6656

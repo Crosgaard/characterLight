@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://co2iow2pdcawg"]
+
+[ext_resource type="Script" path="res://scenes/Menu/menu.gd" id="1_f7ar0"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7ar0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.422068
+anchor_right = 1.0
+anchor_bottom = 0.577932
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="startKnap" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start Spil"
+
+[node name="controlsKnap" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls
+"
+
+[node name="quitKnap" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/startKnap" to="." method="_on_start_knap_pressed"]
+[connection signal="pressed" from="VBoxContainer/controlsKnap" to="." method="_on_controls_knap_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitKnap" to="." method="_on_quit_knap_pressed"]
