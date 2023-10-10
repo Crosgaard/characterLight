@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696848457
+::res://::1696850644
 ._icon.svg::::-1::1696834647::1696848380::1::::<><>::
 icon.svg::CompressedTexture2D::7499595460562371097::1696834648::1696491068::1::::<><>::
 ::res://globals/::1696834648
@@ -49,13 +49,13 @@ spot.png::CompressedTexture2D::2260599367311824811::1696491068::1696834648::1:::
 ._caster.png::::-1::1696848381::1696834648::1::::<><>::
 caster.png::CompressedTexture2D::9112633505392763657::1696491068::1696834648::1::::<><>::
 ::res://scenes/::1696848381
-::res://scenes/levels/::1696848381
+::res://scenes/levels/::1696850609
 ._level.gd::GDScript::-1::1696848381::0::1::::<>RefCounted<>::
 ._level.tscn::PackedScene::-1::1696834648::0::1::::<><>::
 level.gd::GDScript::-1::1696834648::0::1::::LevelParent<>Node2D<>::
-level.tscn::PackedScene::8661367805342232847::1696834619::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png
-::res://scenes/player/::1696848411
+level.tscn::PackedScene::8661367805342232847::1696850609::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png
+::res://scenes/player/::1696850609
 ._player.gd::GDScript::-1::1696834648::0::1::::<>RefCounted<>::
 ._player.tscn::PackedScene::-1::1696834648::0::1::::<><>::
-player.gd::GDScript::-1::1696848411::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6787547855097600375::1696848411::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png<>uid://cs4pbarh4al7c::::res://graphics/Bot Wheel/wake.png<>uid://6j47pwlyp22g::::res://graphics/Bot Wheel/move without FX right.png<>uid://damckno5bre7::::res://graphics/Bot Wheel/move without FX left.png
+player.gd::GDScript::-1::1696850593::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6787547855097600375::1696850609::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png<>uid://cs4pbarh4al7c::::res://graphics/Bot Wheel/wake.png<>uid://6j47pwlyp22g::::res://graphics/Bot Wheel/move without FX right.png<>uid://damckno5bre7::::res://graphics/Bot Wheel/move without FX left.png
