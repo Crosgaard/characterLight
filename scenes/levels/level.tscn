@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dvnvpyoyt8an4"]
+[gd_scene load_steps=17 format=3 uid="uid://dvnvpyoyt8an4"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ubcq4"]
 [ext_resource type="Texture2D" uid="uid://bwsc0pkedda0s" path="res://graphics/Backgrounds/WhiteBackground.jpeg" id="2_43d43"]
@@ -10,9 +10,6 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rdo04"]
 shader = ExtResource("3_hfd6a")
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n77vt"]
-light_mode = 2
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rcvgb"]
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -73,6 +70,7 @@ metadata/_edit_group_ = true
 [node name="KillBarrier" type="Area2D" parent="BackGraphics/SpriteBackground"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackGraphics/SpriteBackground/KillBarrier"]
+position = Vector2(-23.769, 675)
 
 [node name="Sprite2D" type="Sprite2D" parent="BackGraphics"]
 modulate = Color(1, 1, 1, 0)
@@ -82,18 +80,15 @@ scale = Vector2(416, 277.25)
 texture = ExtResource("3_i1a47")
 
 [node name="KillMap" type="TileMap" parent="BackGraphics"]
-material = SubResource("CanvasItemMaterial_n77vt")
 scale = Vector2(3, 1)
 tile_set = SubResource("TileSet_2r2gw")
 format = 2
-layer_0/tile_data = PackedInt32Array(-720899, 0, 0, -720898, 0, 0, -786430, 0, 0, -786431, 0, 0)
 
 [node name="PlatformerTileMap" type="TileMap" parent="BackGraphics"]
 modulate = Color(1, 1, 1, 0)
 scale = Vector2(3, 1)
 tile_set = SubResource("TileSet_3bvyf")
 format = 2
-layer_0/tile_data = PackedInt32Array(131071, 0, 0, -65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65536, 0, 0, -327684, 0, 0, -327683, 0, 0, -327682, 0, 0, -327681, 0, 0, -393216, 0, 0, -393215, 0, 0, -393214, 0, 0, -393213, 0, 0, -393212, 0, 0, -655361, 0, 0, -655362, 0, 0)
 
 [node name="LevelChangeArea" type="Area2D" parent="."]
 metadata/_edit_group_ = true
@@ -123,10 +118,6 @@ position_smoothing_enabled = true
 [node name="Lights" type="Node2D" parent="."]
 
 [node name="UI" parent="." instance=ExtResource("6_5qi5d")]
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color(0, 0.2, 0.188235, 1)
 
 [connection signal="body_entered" from="BackGraphics/SpriteBackground/KillBarrier" to="." method="_on_kill_barrier_body_entered"]
 [connection signal="body_entered" from="LevelChangeArea" to="." method="_on_level_change_area_body_entered"]

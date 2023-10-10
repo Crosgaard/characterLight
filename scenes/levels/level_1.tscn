@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgwfwdicjhwmo"]
+
+[ext_resource type="PackedScene" uid="uid://dvnvpyoyt8an4" path="res://scenes/levels/level.tscn" id="1_lkat5"]
+[ext_resource type="Script" path="res://Level 1.gd" id="2_7frv5"]
+
+[node name="Level 1" instance=ExtResource("1_lkat5")]
+script = ExtResource("2_7frv5")
+
+[node name="PlatformerTileMap" parent="BackGraphics" index="3"]
+modulate = Color(1, 1, 1, 0.45098)
+layer_0/tile_data = PackedInt32Array(-983042, 0, 0, -983041, 0, 0, -1048577, 0, 0, -1114112, 0, 0, -1048576, 0, 0, -393217, 0, 0, -458752, 0, 0)
