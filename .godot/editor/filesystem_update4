@@ -1,3 +1,18 @@
-res://scenes/levels/level_3.tscn
+res://scenes/Menu/controls_menu.tscn
 res://scenes/player/player.gd
 res://scenes/levels/shaderTest.gdshader
+res://scenes/levels/level_1.tscn
+res://Level 1.gd
+res://scenes/levels/Level 1.gd
+res://scenes/levels/level_2.tscn
+res://scenes/levels/Level 3.gd
+res://scenes/player/player.tscn
+res://scenes/User Interface/ui.tscn
+res://scenes/objects/arrow.tscn
+res://scenes/Menu/menu.tscn
+res://scenes/Menu/controls_menu.tscn
+res://scenes/levels/level_3.tscn
+res://globals/transition_layer.tscn
+res://scenes/Menu/menu.gd
+res://globals/globals.gd
+res://globals/transition_layer.gd

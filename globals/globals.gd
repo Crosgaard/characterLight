@@ -2,7 +2,7 @@ extends Node
 
 signal stat_change
 
-var current_scene: String = "res://Scenes/Levels/level.tscn"
+var current_scene: String = "res://scenes/Menu/controls_menu.tscn"
 
 var max_health: int = 5
 var player_vulnerable: bool = true

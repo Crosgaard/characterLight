@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://15mwctkpqwy"
-path="res://.godot/imported/Bad Controls.png-69a71f0d3c24cb982aa52e549d61ce53.ctex"
+uid="uid://c8pr5pfltp55o"
+path="res://.godot/imported/Gut Controls.png-7a6c00d6456b1548eb915222d8de976a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Bad Controls.png"
-dest_files=["res://.godot/imported/Bad Controls.png-69a71f0d3c24cb982aa52e549d61ce53.ctex"]
+source_file="res://graphics/Gut Controls.png"
+dest_files=["res://.godot/imported/Gut Controls.png-7a6c00d6456b1548eb915222d8de976a.ctex"]
 
 [params]
 
