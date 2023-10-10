@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b73xhv3vvnraq"]
+
+[ext_resource type="AudioStream" uid="uid://opiy4oi3axjh" path="res://sounds/music/Wii Music - Gaming Background Music (HD).mp3" id="1_wbswm"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_wbswm")
+autoplay = true

@@ -1,3 +1,6 @@
+Label
+HSlider
+AudioStreamPlayer2D
 Button
 CollisionShape2D
 Area2D

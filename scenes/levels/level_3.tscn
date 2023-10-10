@@ -86,7 +86,7 @@ rotation = 1.57079
 scale = Vector2(0.025, 0.02)
 
 [node name="Player" parent="." index="3"]
-position = Vector2(1921, 60)
+position = Vector2(-3, 2502)
 
 [node name="PointLight2D3" parent="Player" index="4"]
 color = Color(0, 0.654902, 1, 1)

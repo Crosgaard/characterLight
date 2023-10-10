@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://co2iow2pdcawg"]
+[gd_scene load_steps=3 format=3 uid="uid://co2iow2pdcawg"]
 
 [ext_resource type="Script" path="res://scenes/Menu/menu.gd" id="1_f7ar0"]
+[ext_resource type="Texture2D" uid="uid://bwsc0pkedda0s" path="res://graphics/Backgrounds/WhiteBackground.jpeg" id="2_olu03"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +11,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f7ar0")
+
+[node name="WhiteBackground" type="Sprite2D" parent="."]
+position = Vector2(1003, 399)
+texture = ExtResource("2_olu03")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -37,6 +42,28 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 72
 text = "Quit"
 
+[node name="musicSoundSlider" type="HSlider" parent="."]
+modulate = Color(0.0352941, 0.0509804, 0.00392157, 1)
+layout_mode = 0
+offset_left = 182.0
+offset_top = 810.0
+offset_right = 1763.0
+offset_bottom = 826.0
+min_value = -30.0
+max_value = 0.0
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.0431373, 0.0431373, 0.0431373, 1)
+layout_mode = 0
+offset_left = 818.0
+offset_top = 749.0
+offset_right = 1086.0
+offset_bottom = 807.0
+theme_override_font_sizes/font_size = 40
+text = "Music Volume
+"
+
 [connection signal="pressed" from="VBoxContainer/startKnap" to="." method="_on_start_knap_pressed"]
 [connection signal="pressed" from="VBoxContainer/controlsKnap" to="." method="_on_controls_knap_pressed"]
 [connection signal="pressed" from="VBoxContainer/quitKnap" to="." method="_on_quit_knap_pressed"]
+[connection signal="value_changed" from="musicSoundSlider" to="." method="_on_music_sound_slider_value_changed"]
