@@ -84,7 +84,7 @@ position = Vector2(146, -2697.5)
 shape = SubResource("RectangleShape2D_qfyme")
 
 [node name="Player" parent="." index="3"]
-position = Vector2(651, -2681)
+position = Vector2(-102, 334)
 
 [node name="Camera2D" parent="Player" index="5"]
 limit_left = -6656

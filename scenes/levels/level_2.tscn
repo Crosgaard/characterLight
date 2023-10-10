@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://8y4sg83pp1sf"]
+[gd_scene load_steps=6 format=3 uid="uid://8y4sg83pp1sf"]
 
 [ext_resource type="PackedScene" uid="uid://dvnvpyoyt8an4" path="res://scenes/levels/level.tscn" id="1_rv7k1"]
 [ext_resource type="Script" path="res://scenes/levels/Level 1.gd" id="2_h6mov"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0wdh"]
 size = Vector2(2766.77, 39.8211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2arum"]
+size = Vector2(279, 152)
 
 [node name="Level 2" instance=ExtResource("1_rv7k1")]
 script = ExtResource("2_h6mov")
@@ -40,6 +43,13 @@ modulate = Color(0.878431, 0.658824, 1, 1)
 position = Vector2(73.0771, 1436)
 rotation = 0.174533
 scale = Vector2(0.05, 0.032)
+
+[node name="LevelChangeArea" parent="." index="1"]
+position = Vector2(736, 9438)
+
+[node name="CollisionShape2D" parent="LevelChangeArea" index="0"]
+position = Vector2(129.5, -66)
+shape = SubResource("RectangleShape2D_2arum")
 
 [node name="Player" parent="." index="3"]
 position = Vector2(-57, 9838)
