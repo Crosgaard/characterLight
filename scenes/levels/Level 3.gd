@@ -3,7 +3,9 @@ extends "res://scenes/levels/level.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Globals.current_scene = "res://scenes/levels/level_3.gd"
+	#Tilføj "Game Won" screen
+	#next_level = "res://scenes/levels/winsmth.tscn"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
