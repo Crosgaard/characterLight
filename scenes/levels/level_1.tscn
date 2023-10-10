@@ -23,7 +23,7 @@ layer_0/tile_data = PackedInt32Array(-393217, 0, 0, -458752, 0, 0, -917506, 0, 0
 
 [node name="Arrow" parent="BackGraphics/Arrows" index="0" instance=ExtResource("3_8v0kd")]
 modulate = Color(0.243137, 0.831373, 0.823529, 1)
-position = Vector2(63.5385, -76.4615)
+position = Vector2(-22.7692, -163.077)
 
 [node name="Camera2D" parent="Player" index="5"]
 zoom = Vector2(1.5, 1.5)
