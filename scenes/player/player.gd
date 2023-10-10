@@ -1,5 +1,8 @@
 extends CharacterBody2D
 @export var starting_direction: Vector2 = Vector2.RIGHT
+
+@export var dash_speed: float = 1500
+
 @onready var direction: float = starting_direction.x
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
@@ -8,7 +11,6 @@ extends CharacterBody2D
 const MAX_SPEED = 300.0
 const MOVEMENT_ACCEL = 3000
 const JUMP_VELOCITY = -400.0
-const DASH_SPEED: float = 1500
 const DASH_COOLDOWN: float = 250
 
 var dashing: bool = false
@@ -57,7 +59,7 @@ func _physics_process(delta):
 		Engine.time_scale = 1
 		var mouse = get_global_mouse_position()
 		var dash = Vector2(mouse.x - position.x, mouse.y - position.y)
-		dash = dash.normalized() * (DASH_SPEED * min(max(1.25 - Globals.dash_time_used / Globals.DASH_SLOW_TIME/2, 0.5), 1))
+		dash = dash.normalized() * (dash_speed * min(max(1.25 - Globals.dash_time_used / Globals.DASH_SLOW_TIME/2, 0.5), 1))
 		velocity = dash;
 		Globals.dash_time_used = 0
 		
