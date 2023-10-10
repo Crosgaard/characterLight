@@ -11,3 +11,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_win_area_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/Win Screen/win_screen.tscn")
+	pass # Replace with function body.

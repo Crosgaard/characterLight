@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dauu3pipiortd"]
+[gd_scene load_steps=6 format=3 uid="uid://dauu3pipiortd"]
 
 [ext_resource type="PackedScene" uid="uid://dvnvpyoyt8an4" path="res://scenes/levels/level.tscn" id="1_sx8qb"]
 [ext_resource type="Script" path="res://scenes/levels/Level 3.gd" id="2_3rdug"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hay78"]
 size = Vector2(2426.31, 17.3848)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50rx0"]
+size = Vector2(219, 296)
 
 [node name="Level 3" instance=ExtResource("1_sx8qb")]
 script = ExtResource("2_3rdug")
@@ -83,7 +86,7 @@ rotation = 1.57079
 scale = Vector2(0.025, 0.02)
 
 [node name="Player" parent="." index="3"]
-position = Vector2(-16, 2466)
+position = Vector2(1921, 60)
 
 [node name="PointLight2D3" parent="Player" index="4"]
 color = Color(0, 0.654902, 1, 1)
@@ -93,3 +96,11 @@ limit_left = -6656
 limit_top = -4436
 limit_right = 6656
 limit_bottom = 4436
+
+[node name="WinArea" type="Area2D" parent="." index="6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea" index="0"]
+position = Vector2(2157, 13)
+shape = SubResource("RectangleShape2D_50rx0")
+
+[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
