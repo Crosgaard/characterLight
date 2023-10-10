@@ -29,43 +29,55 @@ position = Vector2(380, 345.539)
 rotation = 1.309
 scale = Vector2(0.042, -0.039)
 
-[node name="Arrow2" parent="BackGraphics/Arrows" index="1" instance=ExtResource("3_xrh13")]
+[node name="Arrow8" parent="BackGraphics/Arrows" index="1" instance=ExtResource("3_xrh13")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(307.231, 362)
+rotation = -1.40155
+scale = Vector2(0.042, -0.039)
+
+[node name="Arrow9" parent="BackGraphics/Arrows" index="2" instance=ExtResource("3_xrh13")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(333.846, 307.231)
+rotation = 0.681162
+scale = Vector2(0.042, -0.039)
+
+[node name="Arrow2" parent="BackGraphics/Arrows" index="3" instance=ExtResource("3_xrh13")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(252.769, 202.307)
 rotation = 1.0472
 scale = Vector2(0.038, 0.021)
 
-[node name="Arrow3" parent="BackGraphics/Arrows" index="2" instance=ExtResource("3_xrh13")]
+[node name="Arrow3" parent="BackGraphics/Arrows" index="4" instance=ExtResource("3_xrh13")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(333.846, 172.308)
 scale = Vector2(0.025, 0.02)
 
-[node name="Arrow4" parent="BackGraphics/Arrows" index="3" instance=ExtResource("3_xrh13")]
+[node name="Arrow4" parent="BackGraphics/Arrows" index="5" instance=ExtResource("3_xrh13")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(193.386, 146.769)
 rotation = -2.09439
 scale = Vector2(0.0230769, 0.00615385)
 
-[node name="Arrow5" parent="BackGraphics/Arrows" index="4" instance=ExtResource("3_xrh13")]
+[node name="Arrow5" parent="BackGraphics/Arrows" index="6" instance=ExtResource("3_xrh13")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(202.922, 108.465)
 rotation = 0.785397
 scale = Vector2(0.021, 0.016)
 
-[node name="Arrow6" parent="BackGraphics/Arrows" index="5" instance=ExtResource("3_xrh13")]
+[node name="Arrow6" parent="BackGraphics/Arrows" index="7" instance=ExtResource("3_xrh13")]
 modulate = Color(1, 0.788235, 0, 1)
 position = Vector2(265.845, 84.9229)
 rotation = 1.0472
 scale = Vector2(0.021, 0.011)
 
-[node name="Arrow7" parent="BackGraphics/Arrows" index="6" instance=ExtResource("3_xrh13")]
+[node name="Arrow7" parent="BackGraphics/Arrows" index="8" instance=ExtResource("3_xrh13")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(272.769, 54.4609)
 rotation = -1.57079
 scale = Vector2(0.035, 0.026)
 
 [node name="Player" parent="." index="3"]
-position = Vector2(1476, 965)
+position = Vector2(-51, 2511)
 
 [node name="PointLight2D3" parent="Player" index="4"]
 color = Color(0, 0.654902, 1, 1)
