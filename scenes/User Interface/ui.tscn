@@ -1,33 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjqivewxa86y4"]
+[gd_scene load_steps=4 format=3 uid="uid://cjqivewxa86y4"]
 
 [ext_resource type="Script" path="res://Scenes/User Interface/ui.gd" id="1_8bxq4"]
-[ext_resource type="Texture2D" uid="uid://dt7b4ork33m7v" path="res://graphics/UI/progress_bar/over.png" id="2_r0et0"]
-[ext_resource type="Texture2D" uid="uid://dokqvw41jnbf1" path="res://graphics/UI/progress_bar/progress.png" id="3_kqn0c"]
 [ext_resource type="Texture2D" uid="uid://2g6ytq7aaagu" path="res://graphics/UI/progress_bar/progress - Copy.png" id="4_0mg6r"]
 [ext_resource type="Texture2D" uid="uid://41ogudbq6rym" path="res://graphics/UI/progress_bar/over - Copy.png" id="4_tooli"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_8bxq4")
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/margin_bottom = 30
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer"]
-layout_mode = 2
-max_value = 5.0
-value = 4.0
-texture_over = ExtResource("2_r0et0")
-texture_progress = ExtResource("3_kqn0c")
 
 [node name="DashBar" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(30, 0)

@@ -23,15 +23,18 @@ metadata/_edit_use_anchors_ = true
 
 [node name="startKnap" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 72
 text = "Start Spil"
 
 [node name="controlsKnap" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 72
 text = "Controls
 "
 
 [node name="quitKnap" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 72
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/startKnap" to="." method="_on_start_knap_pressed"]

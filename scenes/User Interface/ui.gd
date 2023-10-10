@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-@onready var health_bar: TextureProgressBar = $MarginContainer/TextureProgressBar
 @onready var dash_bar: TextureProgressBar = $DashBar/TextureDashBar
 
 func _ready():
@@ -15,10 +14,5 @@ func update_dash_bar():
 		dash_bar.modulate = Color(0,0,0,1)
 	pass
 
-func update_health_ui():
-	health_bar.value = Globals.health
-	pass
-
 func update_stat_ui():
-	update_health_ui()
 	update_dash_bar()
