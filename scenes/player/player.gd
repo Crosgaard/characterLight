@@ -1,5 +1,8 @@
 extends CharacterBody2D
 @export var starting_direction: Vector2 = Vector2.RIGHT
+
+@export var dash_speed: float = 1500
+
 @onready var direction: float = starting_direction.x
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
@@ -8,7 +11,6 @@ extends CharacterBody2D
 const MAX_SPEED = 300.0
 const MOVEMENT_ACCEL = 3000
 const JUMP_VELOCITY = -400.0
-const DASH_SPEED: float = 1500
 const DASH_COOLDOWN: float = 250
 
 var dashing: bool = false
@@ -20,6 +22,7 @@ var time_scale_speed: float = original_time_scale_speed
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var floor_friction: float = 1
 
 var prevDir: float = direction
 
@@ -42,7 +45,7 @@ func _process(delta):
 			Engine.time_scale = time_scale_speed
 	
 	if Globals.dash_slowing and Globals.dash_time_used > Globals.DASH_SLOW_TIME and not is_on_floor():
-		Engine.time_scale *= 1.05
+		Engine.time_scale *= 1.07
 		if Engine.time_scale > 1:
 			Input.action_release("Dash")
 
@@ -56,13 +59,15 @@ func _physics_process(delta):
 		Engine.time_scale = 1
 		var mouse = get_global_mouse_position()
 		var dash = Vector2(mouse.x - position.x, mouse.y - position.y)
-		dash = dash.normalized() * (DASH_SPEED * min(1.25 - Globals.dash_time_used / Globals.DASH_SLOW_TIME/2, 1))
+		dash = dash.normalized() * (dash_speed * min(max(1.25 - Globals.dash_time_used / Globals.DASH_SLOW_TIME/2, 0.5), 1))
 		velocity = dash;
 		Globals.dash_time_used = 0
 		
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		floor_friction = 1
 	else:
+		floor_friction = 4
 		can_dash = true
 	
 	# Handle Jump.
@@ -83,12 +88,12 @@ func _physics_process(delta):
 		velocity.x += direction * MOVEMENT_ACCEL * delta
 	
 	if (not Input.is_action_pressed("Left") and not Input.is_action_pressed("Right")) or (absf(velocity.x) > MAX_SPEED):
-		if absf(velocity.x) < MOVEMENT_ACCEL * delta:
+		if absf(velocity.x) < MOVEMENT_ACCEL * delta * floor_friction:
 			velocity.x = 0
 		elif velocity.x < 0:
-			velocity.x += MOVEMENT_ACCEL * delta
+			velocity.x += MOVEMENT_ACCEL * delta * floor_friction
 		elif velocity.x > 0:
-			velocity.x -= MOVEMENT_ACCEL * delta
+			velocity.x -= MOVEMENT_ACCEL * delta * floor_friction
 	
 	update_animation_parameters()
 	pick_new_state()
@@ -109,6 +114,10 @@ func check_enemy_collisions():
 func die():
 	position = respawn_position
 	Globals.health -= 1
+	Globals.dash_slowing = false
+	Input.action_release("Dash")
+	Globals.dash_time_used = 0
+	Engine.time_scale = 1
 
 #animation
 func update_animation_parameters():

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs5upjeh12f1l"]
+
+[ext_resource type="Texture2D" uid="uid://cxmiaiqb0rfnw" path="res://graphics/White Arrow.png" id="1_loygv"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wclkw"]
+light_mode = 2
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ryowj"]
+polygon = PackedVector2Array(-267, -81, -21, -81, -21, -182, 260, 0, -21, 182, -21, 81, -267, 81)
+
+[node name="Arrow" type="StaticBody2D"]
+material = SubResource("CanvasItemMaterial_wclkw")
+scale = Vector2(0.05, 0.04)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-122.5, 0)
+polygon = PackedVector2Array(-133.5, 79, -133.5, -79, 102.5, -79, 102.5, -177, 377.5, 0, 102.5, 177, 102.5, 79)
+one_way_collision = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ryowj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(1.04, 1.04)
+texture = ExtResource("1_loygv")

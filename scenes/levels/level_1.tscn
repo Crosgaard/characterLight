@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgwfwdicjhwmo"]
+
+[ext_resource type="PackedScene" uid="uid://dvnvpyoyt8an4" path="res://scenes/levels/level.tscn" id="1_lkat5"]
+[ext_resource type="Script" path="res://Level 1.gd" id="2_7frv5"]
+[ext_resource type="PackedScene" uid="uid://bs5upjeh12f1l" path="res://scenes/objects/arrow.tscn" id="3_8v0kd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fug7g"]
+size = Vector2(2181.85, 20)
+
+[node name="Level 1" instance=ExtResource("1_lkat5")]
+script = ExtResource("2_7frv5")
+
+[node name="CollisionShape2D" parent="BackGraphics/SpriteBackground/KillBarrier" index="0"]
+position = Vector2(-35.5384, 675)
+shape = SubResource("RectangleShape2D_fug7g")
+
+[node name="KillMap" parent="BackGraphics" index="2"]
+layer_0/tile_data = PackedInt32Array(-2293766, 0, 0, -2293765, 0, 0, -2293764, 0, 0, -2293763, 0, 0, -2293762, 0, 0, -2293761, 0, 0, -2359296, 0, 0, -2424832, 0, 0, -2359297, 0, 0, -2359298, 0, 0, -2359300, 0, 0, -2359301, 0, 0, -2359299, 0, 0, -2293767, 0, 0, -2359303, 0, 0, -2359302, 0, 0)
+
+[node name="PlatformerTileMap" parent="BackGraphics" index="3"]
+modulate = Color(1, 1, 1, 0.568627)
+layer_0/tile_data = PackedInt32Array(-393217, 0, 0, -458752, 0, 0, -917506, 0, 0, -851971, 0, 0, -851972, 0, 0, -1179654, 0, 0, -1179655, 0, 0, -1245191, 0, 0, -1310727, 0, 0, -1376263, 0, 0, -1441799, 0, 0, -1507335, 0, 0, -1572871, 0, 0, -1638407, 0, 0, -1703943, 0, 0, -1769479, 0, 0, -1835015, 0, 0, -1900551, 0, 0, -1966087, 0, 0, -1966086, 0, 0, -2031616, 0, 0, -786425, 1, 0)
+
+[node name="Arrow" parent="BackGraphics/Arrows" index="0" instance=ExtResource("3_8v0kd")]
+modulate = Color(0.243137, 0.831373, 0.823529, 1)
+position = Vector2(63.5385, -76.4615)
+
+[node name="Camera2D" parent="Player" index="5"]
+zoom = Vector2(1.5, 1.5)
