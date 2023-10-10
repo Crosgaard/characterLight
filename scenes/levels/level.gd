@@ -1,5 +1,5 @@
 extends Node2D
-class_name LevelParent
+#class_name LevelParent
 
 var next_level: String
 

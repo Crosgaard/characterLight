@@ -9,10 +9,8 @@ const MAX_SPEED = 300.0
 const MOVEMENT_ACCEL = 3000
 const JUMP_VELOCITY = -400.0
 const DASH_SPEED: float = 1500
-const DASH_SLOW_TIME: float = 1500
 const DASH_COOLDOWN: float = 250
 
-var dash_slow: bool = false
 var dashing: bool = false
 var can_dash: bool = true
 var last_dash: float = 0
@@ -33,27 +31,34 @@ func _ready():
 	update_animation_parameters()
 
 func _process(delta):
+	print(str(Globals.dash_time_used) + " : " + str(last_dash_slow))
+	if Globals.dash_slowing:
+		Globals.dash_time_used = Time.get_ticks_msec() - last_dash_slow
+	
 	if Input.is_action_just_pressed("Dash") and can_dash and Time.get_ticks_msec() - last_dash > DASH_COOLDOWN:
-		dash_slow = true
+		Globals.dash_slowing = true
+		last_dash_slow = Time.get_ticks_msec()
 		if not is_on_floor():
 			Engine.time_scale = time_scale_speed
-	if dash_slow and Time.get_ticks_msec() - last_dash_slow > DASH_SLOW_TIME and not is_on_floor():
+	
+	if Globals.dash_slowing and Globals.dash_time_used > Globals.DASH_SLOW_TIME and not is_on_floor():
 		Engine.time_scale *= 1.05
 		if Engine.time_scale > 1:
 			Input.action_release("Dash")
 
 func _physics_process(delta):
 	# Add the gravity.
-	if dash_slow and Input.is_action_just_released("Dash"):
-		dash_slow = false
+	if Globals.dash_slowing and Input.is_action_just_released("Dash"):
+		Globals.dash_slowing = false
 		can_dash = false
 		dashing = true
 		last_dash = Time.get_ticks_msec()
 		Engine.time_scale = 1
 		var mouse = get_global_mouse_position()
 		var dash = Vector2(mouse.x - position.x, mouse.y - position.y)
-		dash = dash.normalized() * DASH_SPEED
+		dash = dash.normalized() * (DASH_SPEED * min(1.25 - Globals.dash_time_used / Globals.DASH_SLOW_TIME/2, 1))
 		velocity = dash;
+		Globals.dash_time_used = 0
 		
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -103,6 +108,8 @@ func check_enemy_collisions():
 
 func die():
 	position = respawn_position
+	Globals.health -= 1
+
 #animation
 func update_animation_parameters():
 	if(direction != 0):

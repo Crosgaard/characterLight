@@ -1,3 +1,7 @@
-res://scenes/player/player.tscn
-res://scenes/player/player.gd
 res://scenes/levels/level.tscn
+res://scenes/player/player.gd
+res://scenes/levels/shaderTest.gdshader
+res://scenes/player/player.tscn
+res://scenes/User Interface/ui.tscn
+res://globals/globals.gd
+res://Scenes/User Interface/ui.gd
