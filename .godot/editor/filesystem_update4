@@ -9,3 +9,4 @@ res://scenes/Menu/menu.tscn
 res://scenes/Menu/controls_menu.tscn
 res://scenes/levels/level_2.tscn
 res://scenes/levels/level_3.tscn
+res://Scenes/User Interface/ui.gd
