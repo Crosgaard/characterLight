@@ -1,9 +1,13 @@
-DirectionalLight2D
-Sprite2D
-MeshInstance2D
-CanvasModulate
 LightOccluder2D
 Node2D
+CollisionPolygon2D
+CollisionShape2D
+Sprite2D
+StaticBody2D
+TileMap
+DirectionalLight2D
+MeshInstance2D
+CanvasModulate
 AnimationTree
 AnimationPlayer
 AnimatedSprite2D

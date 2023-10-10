@@ -90,6 +90,9 @@ scale = Vector2(3, 1)
 tile_set = SubResource("TileSet_3bvyf")
 format = 2
 
+[node name="Arrows" type="Node2D" parent="BackGraphics"]
+scale = Vector2(6.5, 6.5)
+
 [node name="LevelChangeArea" type="Area2D" parent="."]
 metadata/_edit_group_ = true
 
