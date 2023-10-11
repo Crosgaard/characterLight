@@ -42,28 +42,27 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 72
 text = "Quit"
 
-[node name="musicSoundSlider" type="HSlider" parent="."]
-modulate = Color(0.0352941, 0.0509804, 0.00392157, 1)
-layout_mode = 0
-offset_left = 182.0
-offset_top = 810.0
-offset_right = 1763.0
-offset_bottom = 826.0
-min_value = -30.0
-max_value = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer"]
 modulate = Color(0.0431373, 0.0431373, 0.0431373, 1)
-layout_mode = 0
-offset_left = 818.0
-offset_top = 749.0
-offset_right = 1086.0
-offset_bottom = 807.0
+layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Music Volume
 "
+horizontal_alignment = 1
+
+[node name="musicSoundSlider" type="HSlider" parent="VBoxContainer/VBoxContainer"]
+modulate = Color(0.0352941, 0.0509804, 0.00392157, 1)
+layout_mode = 2
+min_value = -30.0
+max_value = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(572, 321)
 
 [connection signal="pressed" from="VBoxContainer/startKnap" to="." method="_on_start_knap_pressed"]
 [connection signal="pressed" from="VBoxContainer/controlsKnap" to="." method="_on_controls_knap_pressed"]
 [connection signal="pressed" from="VBoxContainer/quitKnap" to="." method="_on_quit_knap_pressed"]
-[connection signal="value_changed" from="musicSoundSlider" to="." method="_on_music_sound_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/VBoxContainer/musicSoundSlider" to="." method="_on_music_sound_slider_value_changed"]
