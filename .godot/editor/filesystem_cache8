@@ -1,134 +1,79 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697023706
-._icon.svg::::-1::1696834647::1696848380::1::::<><>::
-._Level 1.gd::GDScript::-1::1696941106::0::1::::<>RefCounted<>::
-icon.svg::CompressedTexture2D::7499595460562371097::1696834648::1696491068::1::::<><>::
-Level 1.gd::GDScript::-1::1696941107::0::1::::<>Node2D<>::
-::res://globals/::1696941107
-._globals.gd::GDScript::-1::1696941107::0::1::::<>RefCounted<>::
-._transition_layer.gd::GDScript::-1::1696941107::0::1::::<>RefCounted<>::
-._transition_layer.tscn::PackedScene::-1::1696941107::0::1::::<><>::
-globals.gd::GDScript::-1::1696941107::0::1::::<>Node<>::
-transition_layer.gd::GDScript::-1::1696941107::0::1::::<>CanvasLayer<>::
-transition_layer.tscn::PackedScene::687359632531988623::1696941107::0::1::::<><>::res://globals/transition_layer.gd
-::res://graphics/::1697023676
-._Gut Controls.png::::-1::1697023676::1697023676::1::::<><>::
-._White Arrow.png::::-1::1696936637::1696936637::1::::<><>::
-._You win.webp::::-1::1697023676::1697023676::1::::<><>::
-cursor.png::CompressedTexture2D::4852813341781047328::1696919817::1696919817::1::::<><>::
-Gut Controls.png::CompressedTexture2D::7121125432546423754::1696941107::1696941107::1::::<><>::
-White Arrow.png::CompressedTexture2D::6412443485034986012::1696925989::1696925989::1::::<><>::
-You win.webp::CompressedTexture2D::3499006416417772162::1697023676::1697023676::1::::<><>::
-::res://graphics/Backgrounds/::1696848381
-._dark-gray-color-solid-background-1920x1080.png::::-1::1696848381::1696834648::1::::<><>::
-._WhiteBackground.jpeg::::-1::1696848381::1696834648::1::::<><>::
-dark-gray-color-solid-background-1920x1080.png::CompressedTexture2D::7956967229017998971::1696491068::1696834648::1::::<><>::
-WhiteBackground.jpeg::CompressedTexture2D::3967900925620210604::1696491068::1696834648::1::::<><>::
-::res://graphics/Bot Wheel/::1696919816
-._charge.png::::-1::1696848381::1696834648::1::::<><>::
-._damaged.png::::-1::1696848381::1696834648::1::::<><>::
-._death.png::::-1::1696848381::1696834648::1::::<><>::
-._GAS dash FX.png::::-1::1696848381::1696834648::1::::<><>::
-._GAS dash with FX.png::::-1::1696848381::1696834648::1::::<><>::
-._move FX.png::::-1::1696919816::1696834648::1::::<><>::
-._move with FX.png::::-1::1696848381::1696834648::1::::<><>::
-._move without FX left.png::::-1::1696834648::1696834648::1::::<><>::
-._move without FX right.png::::-1::1696834648::1696834648::1::::<><>::
-._shoot FX.png::::-1::1696848381::1696834648::1::::<><>::
-._shoot with FX.png::::-1::1696848381::1696834648::1::::<><>::
-._shoot without FX.png::::-1::1696848381::1696834648::1::::<><>::
-._static idle.png::::-1::1696848381::1696834648::1::::<><>::
-._wake.png::::-1::1696848381::1696834648::1::::<><>::
-charge.png::CompressedTexture2D::6559607667231798430::1696491068::1696834648::1::::<><>::
-damaged.png::CompressedTexture2D::7510882425837043952::1696491068::1696834648::1::::<><>::
-death.png::CompressedTexture2D::7233979229520081145::1696491068::1696834648::1::::<><>::
-GAS dash FX.png::CompressedTexture2D::5705025720452925482::1696491068::1696834648::1::::<><>::
-GAS dash with FX.png::CompressedTexture2D::5481066006257077910::1696491068::1696834648::1::::<><>::
-move FX.png::CompressedTexture2D::6107380586256410923::1696491068::1696834648::1::::<><>::
-move with FX.png::CompressedTexture2D::7779385943502170250::1696491068::1696834648::1::::<><>::
-move without FX left.png::CompressedTexture2D::211299252407308500::1696834648::1696834648::1::::<><>::
-move without FX right.png::CompressedTexture2D::2196252313129158752::1696834648::1696834648::1::::<><>::
-shoot FX.png::CompressedTexture2D::2848769988798904952::1696491068::1696834648::1::::<><>::
-shoot with FX.png::CompressedTexture2D::7512615328014157870::1696491068::1696834648::1::::<><>::
-shoot without FX.png::CompressedTexture2D::4231490783539663017::1696491068::1696834648::1::::<><>::
-static idle.png::CompressedTexture2D::5161598879920891083::1696491068::1696834648::1::::<><>::
-wake.png::CompressedTexture2D::6097020075042410974::1696491068::1696834648::1::::<><>::
-::res://graphics/Light/::1696925989
-._light.png::::-1::1696925989::1696834648::1::::<><>::
-._spot.png::::-1::1696848381::1696834648::1::::<><>::
-._White_Circle.svg.png::::-1::1696919816::1696919816::1::::<><>::
-light.png::CompressedTexture2D::1186499763122081348::1696491068::1696834648::1::::<><>::
-spot.png::CompressedTexture2D::2260599367311824811::1696491068::1696834648::1::::<><>::
-White_Circle.svg.png::CompressedTexture2D::4823321507486224710::1696919816::1696919816::1::::<><>::
-::res://graphics/Platforms/::1696848381
-._caster.png::::-1::1696848381::1696834648::1::::<><>::
-caster.png::CompressedTexture2D::9112633505392763657::1696491068::1696834648::1::::<><>::
-::res://graphics/UI/::1696919817
-._subatomic.tsoonami.ttf::::-1::1696919817::1696919817::1::::<><>::
-subatomic.tsoonami.ttf::FontFile::3925027542248672759::1696919817::1696919817::1::::<><>::
-::res://graphics/UI/progress_bar/::1696919817
-._bg.png::::-1::1696919817::1696919817::1::::<><>::
-._over.png::::-1::1696919817::1696919817::1::::<><>::
-._progress.png::::-1::1696919817::1696919817::1::::<><>::
-bg - Copy.png::CompressedTexture2D::9219106817671975969::1696919817::1696919817::1::::<><>::
-bg.png::CompressedTexture2D::5988159431434048573::1696919817::1696919817::1::::<><>::
-over - Copy.png::CompressedTexture2D::2090012094940125016::1696919817::1696919817::1::::<><>::
-over.png::CompressedTexture2D::8559023435429303973::1696919817::1696919817::1::::<><>::
-progress - Copy.png::CompressedTexture2D::1909411154695168096::1696919817::1696919817::1::::<><>::
-progress.png::CompressedTexture2D::8163559814615512128::1696919817::1696919817::1::::<><>::
-::res://scenes/::1697023676
-::res://scenes/Audio Streams/::1697023676
-._audio_stream_player_2d.tscn::PackedScene::-1::1697023676::0::1::::<><>::
-audio_stream_player_2d.tscn::PackedScene::4691676395842388268::1697023676::0::1::::<><>::uid://opiy4oi3axjh::::res://sounds/music/Wii Music - Gaming Background Music (HD).mp3
-::res://scenes/levels/::1697023676
-._Level 1.gd::GDScript::-1::1696936637::0::1::::<>RefCounted<>::
-._Level 3.gd::GDScript::-1::1697023676::0::1::::<>RefCounted<>::
-._level.gd::GDScript::-1::1696919817::0::1::::<>RefCounted<>::
-._level.gdshader::Shader::-1::1696919817::0::1::::<><>::
-._level.tscn::PackedScene::-1::1696834648::0::1::::<><>::
-._level_1.tscn::PackedScene::-1::1696925989::0::1::::<><>::
-._level_2.tscn::PackedScene::-1::1696936637::0::1::::<><>::
-._level_3.tscn::PackedScene::-1::1696938121::0::1::::<><>::
-._shaderTest.gdshader::Shader::-1::1696919817::0::1::::<><>::
-Level 1.gd::GDScript::-1::1696941107::0::1::::<>Node2D<>::
-Level 3.gd::GDScript::-1::1697023676::0::1::::<>Node2D<>::
-level.gd::GDScript::-1::1696941107::0::1::::<>Node2D<>::
-level.gdshader::Shader::-1::1696919817::0::1::::<><>::
-level.tscn::PackedScene::8661367805342232847::1696939497::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png<>uid://cjqivewxa86y4::::res://scenes/User Interface/ui.tscn
-level_1.tscn::PackedScene::7626154465958237190::1697023676::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://Level 1.gd<>uid://bs5upjeh12f1l::::res://scenes/objects/arrow.tscn
-level_2.tscn::PackedScene::2367570210644522617::1697023676::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://scenes/levels/Level 1.gd<>uid://bs5upjeh12f1l::::res://scenes/objects/arrow.tscn
-level_3.tscn::PackedScene::7201814749146645149::1697023676::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://scenes/levels/Level 3.gd<>uid://bs5upjeh12f1l::::res://scenes/objects/arrow.tscn
-shaderTest.gdshader::Shader::-1::1696941061::0::1::::<><>::
-::res://scenes/Menu/::1697023676
-._controls_menu.gd::GDScript::-1::1696938121::0::1::::<>RefCounted<>::
-._controls_menu.tscn::PackedScene::-1::1696938121::0::1::::<><>::
-._menu.gd::GDScript::-1::1697023676::0::1::::<>RefCounted<>::
-._menu.tscn::PackedScene::-1::1696938121::0::1::::<><>::
-._musicSoundSlider.gd::GDScript::-1::1697023676::0::1::::<>RefCounted<>::
-controls_menu.gd::GDScript::-1::1696938121::0::1::::<>Control<>::
-controls_menu.tscn::PackedScene::3393794874004697803::1696941107::0::1::::<><>::res://scenes/Menu/controls_menu.gd<>uid://c8pr5pfltp55o::::res://graphics/Gut Controls.png
-menu.gd::GDScript::-1::1697023676::0::1::::<>Control<>::
-menu.tscn::PackedScene::5811735312644111826::1697023676::0::1::::<><>::res://scenes/Menu/menu.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg
-musicSoundSlider.gd::GDScript::-1::1697023676::0::1::::<>HSlider<>::
-::res://scenes/objects/::1696939497
-._arrow.tscn::PackedScene::-1::1696936637::0::1::::<><>::
-arrow.tscn::PackedScene::3712992807806609515::1696939497::0::1::::<><>::uid://cxmiaiqb0rfnw::::res://graphics/White Arrow.png
-::res://scenes/player/::1696941060
-._player.gd::GDScript::-1::1696834648::0::1::::<>RefCounted<>::
-._player.tscn::PackedScene::-1::1696834648::0::1::::<><>::
-player.gd::GDScript::-1::1696941060::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6787547855097600375::1696939497::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png<>uid://cs4pbarh4al7c::::res://graphics/Bot Wheel/wake.png<>uid://6j47pwlyp22g::::res://graphics/Bot Wheel/move without FX right.png<>uid://damckno5bre7::::res://graphics/Bot Wheel/move without FX left.png
-::res://scenes/User Interface/::1696941107
-._ui.gd::GDScript::-1::1696941107::0::1::::<>RefCounted<>::
-._ui.tscn::PackedScene::-1::1696919817::0::1::::<><>::
-ui.gd::GDScript::-1::1696941107::0::1::::<>CanvasLayer<>::
-ui.tscn::PackedScene::5438094486933030705::1696941107::0::1::::<><>::res://Scenes/User Interface/ui.gd<>uid://2g6ytq7aaagu::::res://graphics/UI/progress_bar/progress - Copy.png<>uid://41ogudbq6rym::::res://graphics/UI/progress_bar/over - Copy.png
-::res://scenes/Win Screen/::1697023676
-._win_screen.gd::GDScript::-1::1697023676::0::1::::<>RefCounted<>::
-._win_screen.tscn::PackedScene::-1::1697023676::0::1::::<><>::
-win_screen.gd::GDScript::-1::1697023676::0::1::::<>Node2D<>::
-win_screen.tscn::PackedScene::3128115419163851166::1697023676::0::1::::<><>::res://scenes/Win Screen/win_screen.gd<>uid://bp37eh5b7o31o::::res://graphics/You win.webp
-::res://sounds/::1697023676
-::res://sounds/music/::1697023676
-._Wii Music - Gaming Background Music (HD).mp3::::-1::1697023676::1697023676::1::::<><>::
-Wii Music - Gaming Background Music (HD).mp3::AudioStreamMP3::1014139617444542933::1697023676::1697023676::1::::<><>::
+::res://::1696835380
+icon.svg::CompressedTexture2D::7499595460562371097::1696835389::1696835389::1::::<><>::
+Level 1.gd::GDScript::-1::1696939766::0::1::::<>Node2D<>::
+::res://globals/::1696835388
+globals.gd::GDScript::-1::1696939935::0::1::::<>Node<>::
+transition_layer.gd::GDScript::-1::1696940520::0::1::::<>CanvasLayer<>::
+transition_layer.tscn::PackedScene::687359632531988623::1697023014::0::1::::<><>::res://globals/transition_layer.gd
+::res://graphics/::1696835388
+cursor.png::CompressedTexture2D::4852813341781047328::1696875656::1696875672::1::::<><>::
+Gut Controls.png::CompressedTexture2D::7121125432546423754::1696940964::1696940964::1::::<><>::
+White Arrow.png::CompressedTexture2D::6412443485034986012::1696925145::1696925145::1::::<><>::
+You win.webp::CompressedTexture2D::3499006416417772162::1697022515::1697022515::1::::<><>::
+::res://graphics/Backgrounds/::1696835388
+dark-gray-color-solid-background-1920x1080.png::CompressedTexture2D::7956967229017998971::1696835388::1696835388::1::::<><>::
+WhiteBackground.jpeg::CompressedTexture2D::3967900925620210604::1696835388::1696835388::1::::<><>::
+::res://graphics/Bot Wheel/::1696835388
+charge.png::CompressedTexture2D::6559607667231798430::1696835388::1696835388::1::::<><>::
+damaged.png::CompressedTexture2D::7510882425837043952::1696835388::1696835388::1::::<><>::
+death.png::CompressedTexture2D::7233979229520081145::1696835388::1696835388::1::::<><>::
+GAS dash FX.png::CompressedTexture2D::5705025720452925482::1696835388::1696835388::1::::<><>::
+GAS dash with FX.png::CompressedTexture2D::5481066006257077910::1696835388::1696835388::1::::<><>::
+move FX.png::CompressedTexture2D::6107380586256410923::1696835388::1696835388::1::::<><>::
+move with FX.png::CompressedTexture2D::7779385943502170250::1696835388::1696835388::1::::<><>::
+move without FX left.png::CompressedTexture2D::211299252407308500::1696835388::1696835388::1::::<><>::
+move without FX right.png::CompressedTexture2D::2196252313129158752::1696835389::1696835389::1::::<><>::
+shoot FX.png::CompressedTexture2D::2848769988798904952::1696835389::1696835389::1::::<><>::
+shoot with FX.png::CompressedTexture2D::7512615328014157870::1696835389::1696835389::1::::<><>::
+shoot without FX.png::CompressedTexture2D::4231490783539663017::1696835389::1696835389::1::::<><>::
+static idle.png::CompressedTexture2D::5161598879920891083::1696835389::1696835389::1::::<><>::
+wake.png::CompressedTexture2D::6097020075042410974::1696835389::1696835389::1::::<><>::
+::res://graphics/Light/::1696835389
+light.png::CompressedTexture2D::1186499763122081348::1696835389::1696835389::1::::<><>::
+spot.png::CompressedTexture2D::2260599367311824811::1696835389::1696835389::1::::<><>::
+White_Circle.svg.png::CompressedTexture2D::4823321507486224710::1696855616::1696855616::1::::<><>::
+::res://graphics/Platforms/::1696835389
+caster.png::CompressedTexture2D::9112633505392763657::1696835389::1696835389::1::::<><>::
+::res://graphics/UI/::1696855616
+subatomic.tsoonami.ttf::FontFile::3925027542248672759::1696855616::1696855616::1::::<><>::
+::res://graphics/UI/progress_bar/::1696855616
+bg - Copy.png::CompressedTexture2D::9219106817671975969::1696870214::1696870218::1::::<><>::
+bg.png::CompressedTexture2D::5988159431434048573::1696855616::1696855616::1::::<><>::
+over - Copy.png::CompressedTexture2D::2090012094940125016::1696870240::1696870242::1::::<><>::
+over.png::CompressedTexture2D::8559023435429303973::1696855616::1696855616::1::::<><>::
+progress - Copy.png::CompressedTexture2D::1909411154695168096::1696870200::1696870218::1::::<><>::
+progress.png::CompressedTexture2D::8163559814615512128::1696855616::1696855616::1::::<><>::
+::res://scenes/::1696835389
+::res://scenes/Audio Streams/::1697022515
+audio_stream_player_2d.tscn::PackedScene::4691676395842388268::1697023014::0::1::::<><>::uid://opiy4oi3axjh::::res://sounds/music/Wii Music - Gaming Background Music (HD).mp3
+::res://scenes/levels/::1696835389
+Level 1.gd::GDScript::-1::1696939766::0::1::::<>Node2D<>::
+Level 3.gd::GDScript::-1::1697022515::0::1::::<>Node2D<>::
+level.gd::GDScript::-1::1696939609::0::1::::<>Node2D<>::
+level.gdshader::Shader::-1::1696857006::0::1::::<><>::
+level.tscn::PackedScene::8661367805342232847::1697023008::0::1::::<><>::res://scenes/levels/level.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg<>uid://d23h0ijx5t25j::::res://graphics/Platforms/caster.png<>uid://c3x66liwbcuf4::::res://scenes/player/player.tscn<>uid://q50qijo76kmm::::res://graphics/Light/light.png<>uid://cjqivewxa86y4::::res://scenes/User Interface/ui.tscn
+level_1.tscn::PackedScene::7626154465958237190::1697023008::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://Level 1.gd<>uid://bs5upjeh12f1l::::res://scenes/objects/arrow.tscn
+level_2.tscn::PackedScene::2367570210644522617::1697023009::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://scenes/levels/Level 1.gd<>uid://bs5upjeh12f1l::::res://scenes/objects/arrow.tscn
+level_3.tscn::PackedScene::7201814749146645149::1697023014::0::1::::<><>::uid://dvnvpyoyt8an4::::res://scenes/levels/level.tscn<>res://scenes/levels/Level 3.gd<>uid://bs5upjeh12f1l::::res://scenes/objects/arrow.tscn
+shaderTest.gdshader::Shader::-1::1697023057::0::1::::<><>::
+::res://scenes/Menu/::1696937481
+controls_menu.gd::GDScript::-1::1696937481::0::1::::<>Control<>::
+controls_menu.tscn::PackedScene::3393794874004697803::1697023009::0::1::::<><>::res://scenes/Menu/controls_menu.gd<>uid://c8pr5pfltp55o::::res://graphics/Gut Controls.png
+menu.gd::GDScript::-1::1697022515::0::1::::<>Control<>::
+menu.tscn::PackedScene::5811735312644111826::1697023038::0::1::::<><>::res://scenes/Menu/menu.gd<>uid://bwsc0pkedda0s::::res://graphics/Backgrounds/WhiteBackground.jpeg
+musicSoundSlider.gd::GDScript::-1::1697022515::0::1::::<>HSlider<>::
+::res://scenes/objects/::1696925145
+arrow.tscn::PackedScene::3712992807806609515::1697023008::0::1::::<><>::uid://cxmiaiqb0rfnw::::res://graphics/White Arrow.png
+::res://scenes/player/::1696835389
+player.gd::GDScript::-1::1697022539::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6787547855097600375::1697023008::0::1::::<><>::res://scenes/player/player.gd<>uid://cfsk1ra3y1sbr::::res://graphics/Bot Wheel/static idle.png<>uid://cs4pbarh4al7c::::res://graphics/Bot Wheel/wake.png<>uid://6j47pwlyp22g::::res://graphics/Bot Wheel/move without FX right.png<>uid://damckno5bre7::::res://graphics/Bot Wheel/move without FX left.png
+::res://scenes/User Interface/::1696855616
+ui.gd::GDScript::-1::1696938541::0::1::::<>CanvasLayer<>::
+ui.tscn::PackedScene::5438094486933030705::1697023008::0::1::::<><>::res://Scenes/User Interface/ui.gd<>uid://2g6ytq7aaagu::::res://graphics/UI/progress_bar/progress - Copy.png<>uid://41ogudbq6rym::::res://graphics/UI/progress_bar/over - Copy.png
+::res://scenes/Win Screen/::1697022515
+win_screen.gd::GDScript::-1::1697022515::0::1::::<>Node2D<>::
+win_screen.tscn::PackedScene::3128115419163851166::1697023014::0::1::::<><>::res://scenes/Win Screen/win_screen.gd<>uid://bp37eh5b7o31o::::res://graphics/You win.webp
+::res://sounds/::1697022515
+::res://sounds/music/::1697022515
+Wii Music - Gaming Background Music (HD).mp3::AudioStreamMP3::1014139617444542933::1697022515::1697022515::1::::<><>::
