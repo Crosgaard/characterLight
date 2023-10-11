@@ -7,8 +7,8 @@ func _ready():
 	update_stat_ui()
 
 func update_dash_bar():
-	dash_bar.value = min(int(Globals.dash_time_used/ Globals.DASH_SLOW_TIME * 100), 100)
-	if dash_bar.value < 1:
+	dash_bar.value = 100 - min(int(Globals.dash_time_used/ Globals.DASH_SLOW_TIME * 100), 100)
+	if dash_bar.value > 100 or !Globals.can_dash:
 		dash_bar.modulate = Color(0,0,0,0)
 	else:
 		dash_bar.modulate = Color(0,0,0,1)

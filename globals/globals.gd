@@ -37,6 +37,11 @@ func player_movable_timer():
 const DASH_SLOW_TIME: float = 1000
 var dash_slowing: bool = false
 
+var can_dash: bool = true:
+	set(value):
+		can_dash = value
+		stat_change.emit()
+
 var dash_time_used: float = 0:
 	set(value):
 		dash_time_used = value

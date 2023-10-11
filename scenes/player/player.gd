@@ -14,7 +14,6 @@ const JUMP_VELOCITY = -400.0
 const DASH_COOLDOWN: float = 250
 
 var dashing: bool = false
-var can_dash: bool = true
 var last_dash: float = 0
 var last_dash_slow: float = 0
 var original_time_scale_speed: float = 0.1
@@ -38,7 +37,7 @@ func _process(delta):
 	if Globals.dash_slowing:
 		Globals.dash_time_used = Time.get_ticks_msec() - last_dash_slow
 	
-	if Input.is_action_just_pressed("Dash") and can_dash and Time.get_ticks_msec() - last_dash > DASH_COOLDOWN:
+	if Input.is_action_just_pressed("Dash") and Globals.can_dash and Time.get_ticks_msec() - last_dash > DASH_COOLDOWN:
 		Globals.dash_slowing = true
 		last_dash_slow = Time.get_ticks_msec()
 		if not is_on_floor():
@@ -53,7 +52,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if Globals.dash_slowing and Input.is_action_just_released("Dash"):
 		Globals.dash_slowing = false
-		can_dash = false
+		Globals.can_dash = false
 		dashing = true
 		last_dash = Time.get_ticks_msec()
 		Engine.time_scale = 1
@@ -68,7 +67,7 @@ func _physics_process(delta):
 		floor_friction = 1
 	else:
 		floor_friction = 4
-		can_dash = true
+		Globals.can_dash = true
 	
 	# Handle Jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
