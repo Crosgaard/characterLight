@@ -1,10 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://c3x66liwbcuf4"]
+[gd_scene load_steps=31 format=3 uid="uid://c3x66liwbcuf4"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_fs1rk"]
 [ext_resource type="Texture2D" uid="uid://cfsk1ra3y1sbr" path="res://graphics/Bot Wheel/static idle.png" id="2_2xawa"]
 [ext_resource type="Texture2D" uid="uid://cs4pbarh4al7c" path="res://graphics/Bot Wheel/wake.png" id="3_3u7pp"]
 [ext_resource type="Texture2D" uid="uid://6j47pwlyp22g" path="res://graphics/Bot Wheel/move without FX right.png" id="4_8jqxa"]
 [ext_resource type="Texture2D" uid="uid://damckno5bre7" path="res://graphics/Bot Wheel/move without FX left.png" id="5_1ihu6"]
+[ext_resource type="AudioStream" uid="uid://dmi034cgmg1r1" path="res://sounds/Dash (Jett) - Sound Effect (Valorant Game SFX).mp3" id="6_n63gn"]
+[ext_resource type="AudioStream" uid="uid://bclxdxf3ptbej" path="res://sounds/The Last of Us_ Death Sound Effect.mp3" id="7_3saet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmpra"]
 size = Vector2(9.6, 15.4)
@@ -558,3 +560,9 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/Wake/blend_position = -0.995069
 parameters/Walk/blend_position = 0.00788951
+
+[node name="DashSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_n63gn")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_3saet")

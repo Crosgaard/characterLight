@@ -61,6 +61,7 @@ func _physics_process(delta):
 		dash = dash.normalized() * (dash_speed * min(max(1.25 - Globals.dash_time_used / Globals.DASH_SLOW_TIME/2, 0.5), 1))
 		velocity = dash;
 		Globals.dash_time_used = 0
+		$DashSound.play()
 		
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -111,6 +112,7 @@ func check_enemy_collisions():
 			die()
 
 func die():
+	$DeathSound.play()
 	position = respawn_position
 	Globals.health -= 1
 	Globals.dash_slowing = false
