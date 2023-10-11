@@ -1,3 +1,6 @@
+ColorRect
+TextureRect
+Sprite2D
 MarginContainer
 CanvasLayer
 Camera2D
@@ -8,7 +11,6 @@ AudioStreamPlayer2D
 Button
 CollisionShape2D
 Area2D
-Sprite2D
 LightOccluder2D
 Node2D
 CollisionPolygon2D
