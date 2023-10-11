@@ -1,3 +1,4 @@
+MarginContainer
 Camera2D
 VBoxContainer
 Label
@@ -7,7 +8,6 @@ Button
 CollisionShape2D
 Area2D
 Sprite2D
-MarginContainer
 LightOccluder2D
 Node2D
 CollisionPolygon2D
