@@ -12,13 +12,9 @@ func _on_controls_knap_pressed():
 func _on_quit_knap_pressed():
 	get_tree().quit()
 
-
-
-
 func _on_music_sound_slider_value_changed(value):
-	AudioServer.set_bus_volume_db(master_bus, value)
-	
-	if value == -30:
+	if value < -29:
 		AudioServer.set_bus_mute(master_bus, true)
 	else:
 		AudioServer.set_bus_mute(master_bus, false)
+		AudioServer.set_bus_volume_db(master_bus, value)
