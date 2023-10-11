@@ -18,6 +18,7 @@ offset_bottom = 165.0
 grow_vertical = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 50
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureDashBar" type="TextureProgressBar" parent="DashBar"]
 layout_direction = 1
