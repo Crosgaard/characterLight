@@ -13,3 +13,4 @@ res://globals/transition_layer.tscn
 res://scenes/Win Screen/win_screen.tscn
 res://scenes/Audio Streams/audio_stream_player_2d.tscn
 res://scenes/Menu/menu.gd
+res://scenes/Menu/controls_menu.gd
