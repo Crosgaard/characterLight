@@ -1,6 +1,7 @@
 res://scenes/player/player.tscn
 res://scenes/player/player.gd
 res://scenes/levels/shaderTest.gdshader
+res://globals/globals.gd
 res://scenes/levels/level.tscn
 res://scenes/User Interface/ui.tscn
 res://scenes/levels/level_1.tscn
@@ -12,4 +13,4 @@ res://scenes/levels/level_3.tscn
 res://globals/transition_layer.tscn
 res://scenes/Win Screen/win_screen.tscn
 res://scenes/Audio Streams/audio_stream_player_2d.tscn
-res://scenes/Menu/menu.gd
+res://Level 1.gd

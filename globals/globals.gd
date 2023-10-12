@@ -1,10 +1,10 @@
 extends Node
 
 signal stat_change
+var current_scene = "res://scenes/Menu/menu.tscn"
 
-var current_scene: String = "res://scenes/Menu/controls_menu.tscn"
-
-var max_health: int = 5
+#HEALTH
+var max_health: int = 1
 var player_vulnerable: bool = true
 
 var player_movable: bool = true:
@@ -22,8 +22,6 @@ var health = max_health:
 			player_vulnerable = false
 			player_movable = false
 			player_invulnerable_timer()
-			player_movable_timer()
-		stat_change.emit()
 
 func player_invulnerable_timer():
 	await get_tree().create_timer(0.5).timeout
@@ -32,8 +30,9 @@ func player_invulnerable_timer():
 func player_movable_timer():
 	await get_tree().create_timer(0.5).timeout
 	player_movable = true
-	print(player_movable)
 
+
+#DASH
 const DASH_SLOW_TIME: float = 1000
 var dash_slowing: bool = false
 

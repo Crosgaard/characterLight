@@ -2,7 +2,7 @@ extends "res://scenes/levels/level.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Globals.current_scene = "res://scenes/levels/level_1.gd"
+	Globals.current_scene = "res://scenes/levels/level_1.tscn"
 
 	next_level = "res://scenes/levels/level_2.tscn"
 

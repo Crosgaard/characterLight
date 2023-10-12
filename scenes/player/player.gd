@@ -33,20 +33,19 @@ func _ready():
 	update_animation_parameters()
 
 func _process(delta):
-	print(str(Globals.dash_time_used) + " : " + str(last_dash_slow))
 	if Globals.dash_slowing:
 		Globals.dash_time_used = Time.get_ticks_msec() - last_dash_slow
+		
+		if Globals.dash_time_used > Globals.DASH_SLOW_TIME and not is_on_floor():
+			Engine.time_scale *= 1.07
+			if Engine.time_scale > 1:
+				Input.action_release("Dash")
 	
 	if Input.is_action_just_pressed("Dash") and Globals.can_dash and Time.get_ticks_msec() - last_dash > DASH_COOLDOWN:
 		Globals.dash_slowing = true
 		last_dash_slow = Time.get_ticks_msec()
 		if not is_on_floor():
 			Engine.time_scale = time_scale_speed
-	
-	if Globals.dash_slowing and Globals.dash_time_used > Globals.DASH_SLOW_TIME and not is_on_floor():
-		Engine.time_scale *= 1.07
-		if Engine.time_scale > 1:
-			Input.action_release("Dash")
 
 func _physics_process(delta):
 	# Add the gravity.
