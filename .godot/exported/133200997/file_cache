@@ -1,0 +1,12 @@
+res://globals/transition_layer.tscn::595a290ca753e0b8b9e9bd2ffdb97fb8::1697119202::res://.godot/exported/133200997/export-c92c1d1c720997ae32de7c016731d320-transition_layer.scn
+res://scenes/Audio Streams/audio_stream_player_2d.tscn::ecd273dc2db717410897eb77d80e07ca::1697119202::res://.godot/exported/133200997/export-791d6963b8e75662b8e8ec26788ea918-audio_stream_player_2d.scn
+res://scenes/levels/level.tscn::1e2599c5b1606190e0e8f1c1c5e31e78::1697119198::res://.godot/exported/133200997/export-d2f84246acaf0198009608664807e4e4-level.scn
+res://scenes/levels/level_1.tscn::79f8af9a88c962403f371fa1ea68bd6e::1697119200::res://.godot/exported/133200997/export-446b1ed11cc7129b20b35ff4df2b3752-level_1.scn
+res://scenes/levels/level_2.tscn::1e7ca9e0f53730fb2bfc0877d31c92b3::1697119200::res://.godot/exported/133200997/export-a18c5401c17cd33ddcb0f5ac6af637f4-level_2.scn
+res://scenes/levels/level_3.tscn::9cd68c0e9a97e6b1d0ab5339081bb098::1697119200::res://.godot/exported/133200997/export-b6a8ed086a8d8ba97c24b83f09c5fd0c-level_3.scn
+res://scenes/Menu/controls_menu.tscn::e826d10e29f08713e516933eb367f2f7::1697119200::res://.godot/exported/133200997/export-7953bbeb7debbb70033bfae30167edfc-controls_menu.scn
+res://scenes/Menu/menu.tscn::9a17138fc59bf1e6fbfd974d18dad0fa::1697119248::res://.godot/exported/133200997/export-796893ff68ad0594f86793d61e7f4d1e-menu.scn
+res://scenes/objects/arrow.tscn::c6525eec1080491663e20b97d8d16b87::1697119200::res://.godot/exported/133200997/export-1a572e84a3c18c50d808ca417147bd1e-arrow.scn
+res://scenes/player/player.tscn::15ff80e24b91d56ef238fbfa372be2c5::1697119200::res://.godot/exported/133200997/export-c2c62cb8c73458cd122faf659769dc80-player.scn
+res://scenes/User Interface/ui.tscn::5ec18b068efabf6b3d23e0e7a0243207::1697119200::res://.godot/exported/133200997/export-d97b0168b8d48ab8777243feb1c77e94-ui.scn
+res://scenes/Win Screen/win_screen.tscn::119288d53e8ba29e51e1206017b4a240::1697119202::res://.godot/exported/133200997/export-f794cea69a65f5dcc1e98e5c2718f74c-win_screen.scn
